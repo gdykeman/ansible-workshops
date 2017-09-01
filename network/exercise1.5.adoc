@@ -1,0 +1,44 @@
+= Exercise 1.5 - Executing your playbook and review
+
+---
+
+****
+Congratulations!  You just wrote a playbook that incorporates some key Ansible concepts that you use in
+most if not all of your future playbooks.  Before you get too excited though, we should probably make sure
+it actually runs.
+
+So, lets do that now.
+
+[.lead]
+Section 1 - Running your new apache playbook
+
+====
+*Step 1:* Make sure you are in the right directory and create a host file.
+
+----
+% cd ~/apache-basic-playbook
+----
+
+[NOTE]
+Since you already did the work of creating a host file in Lession 1.0, feel free to just copy `hosts` from
+your `apache_basic` project.  Or, hey... if you like to type, create a new file called `hosts` and put this in it.
+
+----
+[web]
+node-1 ansible_host=<IP Address of your node-1>
+node-2 ansible_host=<IP Address of your node-2>
+----
+
+*Step 2:* Run your playbook
+----
+% ansible-playbook -i ./hosts site.yml -k
+----
+
+***
+[.lead]
+Section 2: Review
+
+If successful, you should see standard output that looks very similar to the following.  If not, just let us
+know.  We'll help get things fixed up.
+
+image::stdout_2.png[caption="Figure 1: ", title="apache-basic-playbook stdout"]

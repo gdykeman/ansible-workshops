@@ -1,0 +1,51 @@
+:tower_url: https://ansible-tower-bos.redhatgov.io
+
+= Workshop Lab Setup
+
+---
+****
+[IMPORTANT]
+Today's workshop infrastructure is being run in Amazon EC2. +
+Each student will be assigned a number, e.g. student1, student2, student3  +
+Your instructor will supply you with a web site url or IP address where you will find detailed info for +
+your own personal lab environment. +
+- *username: ec2-user* +
+- *ssh-key to use* +
+- *hostnames of your instances* +
+
+****
+
+[.lead]
+Workshop Infrastructure
+
+Each student's personal EC2 lab is equipped with the following:
+****
+* (1) Control node (to run ansible plays and install Ansible Tower).
+* (2) Router nodes (to execute ansible playbooks upon).
+* (1) Host node (to test connectivity)
+
+.Setup Your Environment
+****
+Before we can begin doing super-cool automations and such, we've got to get a few basics out of the way.
+Namely... ssh access to your EC2 nodes.
+
+[.lead]
+Testing your environment
+
+[NOTE]
+.Testing your access
+====
+* Open a terminal or terminal emulator (like PuTTy)
+* ssh to each one of your EC2 nodes/instances using ssh.
+* ssh ec2-user@<student#-control.net-ws.redhatgov.io
+- EXAMPLE: ```ssh ec2-user@student1-control.net-ws.redhatgov.io```
+====
+
+[IMPORTANT]
+Be sure you can log in to your ec2 instances.  If you can't log in start shouting, loudly, and waving your hands!
+
+
+[.lead]
+End Result
+
+At this point, everyone should have logged into their Ansible control node.  If you haven't, let us know so we can get you fixed up.

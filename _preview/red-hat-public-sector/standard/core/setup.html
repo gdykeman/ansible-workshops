@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="ie8"> <![endif]-->
+<!--[if IE 9]> <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Ansible Workshops Branch Build | Ansible Essentials | Setup</title>
+  <link href="https://assets.openshift.net/content/subdomain.css" rel="stylesheet" type="text/css">
+  <link href="../../standard/_stylesheets/docs.css" rel="stylesheet" />
+  <link href="https://www.ansible.com/hs-fs/hub/330046/file-448313641-png/favicon.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="https://www.ansible.com/hs-fs/hub/330046/file-448313641-png/favicon.png" rel="shortcut icon" type="text/css">
+  <!--[if IE]><link rel="shortcut icon" href="https://www.ansible.com/hs-fs/hub/330046/file-448313641-png/favicon.png"><![endif]-->
+  <!-- or, set /favicon.ico for IE10 win -->
+  <meta content="OpenShift" name="application-name">
+  <meta content="#000000" name="msapplication-TileColor">
+  <meta content="https://www.ansible.com/hs-fs/hub/330046/file-448313641-png/favicon.png" name="msapplication-TileImage">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://assets.openshift.net/content/html5shiv.js" type="text/javascript"></script>
+    <script src="https://assets.openshift.net/content/respond.js" type="text/javascript"></script>
+    <link href="https://assets.openshift.net/content/vendor/respond-js/respond-proxy.html" id="respond-proxy" rel="respond-proxy">
+    <link href="../../standard/_images/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
+    <script src="../../standard/_javascripts/respond.proxy.js" type="text/javascript"></script>
+  <![endif]-->
+  <script src="https://assets.openshift.net/content/modernizr.js" type="text/javascript"></script>
+  <script src="https://assets.openshift.net/content/subdomain.js" type="text/javascript"></script>
+  <script src="../../standard/_javascripts/bootstrap-offcanvas.js" type="text/javascript"></script>
+  <script type="text/javascript" src="https://assets.openshift.net/app/assets/site/tracking.js"></script>
+</head>
+<body>
+  <div class="navbar navbar-default navbar-openshift" role="navigation">
+  <div class="navbar-header">
+    <div class="dropdown">
+      <a href="#" class="dropdown-toggle navbar-menu-toggle" data-toggle="dropdown">
+        <span class="navbar-menu-title">MENU</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <ul class="dropdown-menu navbar-menu" role="menu">
+        <li class="submenu">
+          <a href="#">Overview</a>
+          <ul id="submenu-overview" class="dropdown-submenu">
+            <li class="submenu-heading">Public Sector Workshop</li>
+            <li>
+                What is Ansible Tower?
+                <span class="submenu-item-desc">Extend the power of Ansible to your entire team. Ansible Tower by Red Hat helps you scale IT automation, manage complex deployments and speed productivity. Centralize and control your IT infrastructure with a visual dashboard, role-based access control, job scheduling and graphical inventory management.</span>
+              </a>
+            </li>
+            <li class="submenu-heading">Links</li>
+            <li>
+              <a href="https://www.ansible.com/tower">
+                Ansible Tower
+                <span class="submenu-item-desc">Learn more about Ansible Tower.</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.ansible.com/">
+                Ansible
+                <span class="submenu-item-desc">Ansible seamlessly unites workflow orchestration with configuration management, provisioning, and application deployment in one easy-to-use and deploy platform.</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://galaxy.ansible.com/">
+                Ansible Galaxy
+                <span class="submenu-item-desc">Jump-start your automation project with great content from the Ansible community. Galaxy provides pre-packaged units of work known to Ansible as roles. Roles can be dropped into Ansible PlayBooks and immediately put to work. You'll find roles for provisioning infrastructure, deploying applications, and all of the tasks you do everyday.</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="submenu">
+          <a href="#">Connect</a>
+          <ul id="submenu-connect" class="dropdown-submenu">
+            <li>
+              <a href="https://access.redhat.com/downloads/">
+                Downloads <i class="fa fa-external-link pull-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://dgshow.org/">
+                The Dave and Gunnar Show
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/redhatgov">
+                Twitter <i class="fa fa-external-link pull-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/ansibleautomation/">
+                Facebook <i class="fa fa-external-link pull-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/red-hat">
+                LinkedIn <i class="fa fa-external-link pull-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/RedHatGov">
+                GitHub <i class="fa fa-external-link pull-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://plus.google.com/+RedHat">
+                Google+ <i class="fa fa-external-link pull-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/user/RedHatVideos">
+                YouTube <i class="fa fa-external-link pull-right"></i>
+              </a>
+            </li>
+          </ul>
+        </li>
+      <li class="submenu">
+        <a href="#">Contact Us</a>
+        <ul id="submenu-connect" class="dropdown-submenu">
+          <li>
+             <a href="https://www.redhat.com/en/about/contact#na">
+             Contact Us
+             </a>
+          </li>
+        </ul>
+    </div>
+    <a class="navbar-brand red-hat-public-sector" href="/"></a>
+  </div>
+  <!-- <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="hidden-xs dropdown"> <a href="#" class="dropdown-toggle nav-log-in" data-toggle="dropdown"> My Account<span class="caret"></span> </a>
+        <ul class="dropdown-menu">
+          <li><a href="https://openshift.redhat.com/app/console">OpenShift Web Console</a></li>
+          <li><a href="https://console.preview.openshift.com/">(Next Gen) Web Console</a></li>
+          <li><a href="https://hub.openshift.com/users/auth/github">OpenShift Hub</a></li>
+        </ul>
+      </li>
+      <li class="hidden-xs hidden-sm"><a class="nav-sign-up" href="https://www.openshift.com/devpreview/register.html">Sign up for Free</a></li>
+    </ul>
+  </div> -->
+</div>
+  <div class="container">
+    <p class="toggle-nav visible-xs pull-left">
+      <button class="btn btn-default btn-sm" type="button" data-toggle="offcanvas">Toggle nav</button>
+    </p>
+    <ol class="breadcrumb">
+      <li class="sitename">
+        <a href="../../index.html">Ansible</a>
+      </li>
+      <li class="hidden-xs active">
+        <a href="../core/index.html">Ansible Workshops Branch Build</a>
+      </li>
+      <li class="hidden-xs active">
+        <a href="../core/index.html">Ansible Essentials</a>
+      </li>
+      
+      <li class="hidden-xs active">
+        Setup
+      </li>
+    </ol>
+    <div class="row row-offcanvas row-offcanvas-left">
+      <div class="col-xs-8 col-sm-3 col-md-3 sidebar sidebar-offcanvas">
+        <div class="row-fluid">
+          
+<script>
+  (function() {
+    var cx = '013769182564158614814:e-dp46b51vk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+
+        </div>
+        <ul class="nav nav-sidebar">
+    <li class="nav-header">
+      <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicGroup0">
+        <span id="tgSpan0" class="fa fa-angle-down"></span>Ansible Essentials
+      </a>
+      <ul id="topicGroup0" class="collapse in list-unstyled">
+            <li><a class="" href="../core/index.html">Agenda</a></li>
+            <li><a class=" active" href="../core/setup.html">Setup</a></li>
+            <li><a class="" href="../core/exercise1.1.html">Exercise 1.1</a></li>
+            <li><a class="" href="../core/exercise1.2.html">Exercise 1.2</a></li>
+            <li><a class="" href="../core/exercise1.3.html">Exercise 1.3</a></li>
+            <li><a class="" href="../core/exercise1.4.html">Exercise 1.4</a></li>
+            <li><a class="" href="../core/exercise1.5.html">Exercise 1.5</a></li>
+            <li><a class="" href="../core/exercise1.6.html">Exercise 1.6</a></li>
+            <li><a class="" href="../core/wrapup.html">Wrap Up</a></li>
+      </ul>
+    </li>
+    <li class="nav-header">
+      <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicGroup1">
+        <span id="tgSpan1" class="fa fa-angle-right"></span>Ansible Tower
+      </a>
+      <ul id="topicGroup1" class="collapse  list-unstyled">
+            <li><a class="" href="../tower/index.html">Agenda</a></li>
+            <li><a class="" href="../tower/setup.html">Setup</a></li>
+            <li><a class="" href="../tower/exercise1.1.html">Exercise 1.1</a></li>
+            <li><a class="" href="../tower/exercise1.2.html">Exercise 1.2</a></li>
+            <li><a class="" href="../tower/exercise1.3.html">Exercise 1.3</a></li>
+            <li><a class="" href="../tower/wrapup.html">Wrap Up</a></li>
+      </ul>
+    </li>
+    <li class="nav-header">
+      <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicGroup2">
+        <span id="tgSpan2" class="fa fa-angle-right"></span>Ansible Network
+      </a>
+      <ul id="topicGroup2" class="collapse  list-unstyled">
+            <li><a class="" href="../network/index.html">Agenda</a></li>
+            <li><a class="" href="../network/setup.html">Setup</a></li>
+            <li><a class="" href="../network/exercise1.1.html">Exercise 1.1</a></li>
+            <li><a class="" href="../network/exercise1.2.html">Exercise 1.2</a></li>
+            <li><a class="" href="../network/exercise1.3.html">Exercise 1.3</a></li>
+            <li><a class="" href="../network/exercise1.4.html">Exercise 1.4</a></li>
+            <li><a class="" href="../network/exercise1.5.html">Exercise 1.5</a></li>
+            <li><a class="" href="../network/exercise1.6.html">Exercise 1.6</a></li>
+            <li><a class="" href="../network/exercise2.1.html">Exercise 2.1</a></li>
+            <li><a class="" href="../network/exercise2.2.html">Exercise 2.2</a></li>
+            <li><a class="" href="../network/exercise2.3.html">Exercise 2.3</a></li>
+            <li><a class="" href="../network/wrapup.html">Wrap Up</a></li>
+      </ul>
+    </li>
+    <li class="nav-header">
+      <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicGroup3">
+        <span id="tgSpan3" class="fa fa-angle-right"></span>Ansible Security
+      </a>
+      <ul id="topicGroup3" class="collapse  list-unstyled">
+            <li><a class="" href="../security/index.html">Agenda</a></li>
+            <li><a class="" href="../security/setup.html">Setup</a></li>
+      </ul>
+    </li>
+    <li class="nav-header">
+      <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicGroup4">
+        <span id="tgSpan4" class="fa fa-angle-right"></span>Additional Resources
+      </a>
+      <ul id="topicGroup4" class="collapse  list-unstyled">
+            <li><a class="" href="../resources/links.html">Links</a></li>
+            <li><a class="" href="../resources/decks.html">Decks</a></li>
+      </ul>
+    </li>
+</ul>
+      </div>
+      <div class="col-xs-12 col-sm-9 col-md-9 main">
+        <div class="page-header">
+          <h2>Workshop Lab Setup</h2>
+        </div>
+        <hr>
+<div class="sidebarblock">
+<div class="content">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Today&#8217;s workshop infrastructure is being run in Amazon EC2.<br>
+Each student will be assigned a number, e.g. student1, student2, student3 <br>
+Your instructor will supply you with a web site url or IP address where you will find detailed info for<br>
+your own personal lab environment.<br>
+- <strong>EC2 username</strong><br>
+- <strong>EC2 password</strong><br>
+- <strong>IP Addresses for each of your EC2 instances</strong><br>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph lead">
+<p>Workshop Infrastructure</p>
+</div>
+<div class="paragraph">
+<p>Each student&#8217;s personal EC2 lab is equipped with the following:</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>(1) Control node (to run ansible plays and install Ansible Tower).</p>
+</li>
+<li>
+<p>(2) Endpoint nodes (to execute ansible playbooks upon).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Before we can begin doing super-cool automations and such, we&#8217;ve got to get a few basics out of the way.
+Namely&#8230;&#8203; ssh access to your EC2 nodes.</p>
+</div>
+<div class="paragraph lead">
+<p>Testing your environment</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Testing your access</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Open a terminal or terminal emulator (like PuTTy)</p>
+</li>
+<li>
+<p>ssh to each one of your EC2 nodes/instances using ssh.</p>
+</li>
+<li>
+<p>ssh &lt;account name&gt;@&lt;IP address of node&gt;</p>
+<div class="ulist">
+<ul>
+<li>
+<p>EXAMPLE: <code><code>ssh bhirsch@52.62.1.8</code></code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Be sure you can log in to your ec2 instances.  If you can&#8217;t log in start shouting, loudly, and waving your hands!
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph lead">
+<p>End Result</p>
+</div>
+<div class="paragraph">
+<p>At this point, everyone should have logged into each of your 3 nodes.  If you haven&#8217;t, let us know so we can get you fixed up.</p>
+</div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    /*<![CDATA[*/
+    $(document).ready(function() {
+      $("[id^='topicGroup']").on('show.bs.collapse', function (event) {
+        if (!($(event.target).attr('id').match(/^topicSubGroup/))) {
+          $(this).parent().find("[id^='tgSpan']").toggleClass("fa-angle-right fa-angle-down");
+        }
+      });
+      $("[id^='topicGroup']").on('hide.bs.collapse', function (event) {
+        if (!($(event.target).attr('id').match(/^topicSubGroup/))) {
+          $(this).parent().find("[id^='tgSpan']").toggleClass("fa-angle-right fa-angle-down");
+        }
+      });
+      $("[id^='topicSubGroup']").on('show.bs.collapse', function () {
+        $(this).parent().find("[id^='sgSpan']").toggleClass("fa-caret-right fa-caret-down");
+      });
+      $("[id^='topicSubGroup']").on('hide.bs.collapse', function () {
+        $(this).parent().find("[id^='sgSpan']").toggleClass("fa-caret-right fa-caret-down");
+      });
+    });
+    /*]]>*/
+  </script>
+    <footer class="footer-openshift">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-3 logo">
+        <a href="https://www.redhat.com/"></a>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-6 text-center">
+        <div class="row">
+          <div class="col-xs-12 col-md-4">
+            <a href="https://www.redhat.com/en/about/privacy-policy">
+              Privacy Policy
+            </a>
+          </div>
+          <div class="col-xs-12 col-md-4">
+          <a href="https://www.redhat.com/en/about/terms-use">
+            Terms and Conditions
+          </a>
+          </div>
+          <div class="col-xs-12 col-md-4">
+          <a href="https://www.redhat.com/en/technologies/industries/government">
+            Public Sector
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-3 text-right">
+        <a id="built_with_asciibinder" href="http://asciibinder.org/">
+          <img src="../../standard/_images/asciibinder_web_logo.svg" alt="AsciiBinder" />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

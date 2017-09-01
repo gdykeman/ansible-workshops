@@ -1,0 +1,108 @@
+# This configuration file dictates the organization of the topic groups and
+# topics on the main page of the doc site for this branch. Each record
+# consists of the following:
+#
+# ---                                  <= Record delimiter
+# Name: Origin of the Species          <= Display name of topic group
+# Dir:  origin_of_the_species          <= Directory name of topic group
+# Topics:
+#   - Name: The Majestic Marmoset      <= Topic name
+#     File: the_majestic_marmoset      <= Topic file under group dir +/- .adoc
+#   - Name: The Curious Crocodile      <= Topic 2 name
+#     File: the_curious_crocodile      <= Topic 2 file
+#   - Name: The Numerous Nematodes     <= Sub-topic group name
+#     Dir: the_numerous_nematodes      <= Sub-topic group dir
+#     Topics:
+#       - Name: The Wily Worm          <= Sub-topic name
+#         File: the_wily_worm          <= Sub-topic file under <group dir>/<subtopic dir>
+#       - Name: The Acrobatic Ascarid  <= Sub-topic 2 name
+#         File: the_acrobatic_ascarid  <= Sub-topic 2 file under <group dir>/<subtopic dir>
+#
+# The ordering of the records in this document determines the ordering of the
+# topic groups and topics on the main page.
+---
+Name: Ansible Essentials
+Dir: core
+Topics:
+  - Name: Agenda
+    File: index
+  - Name: Setup
+    File: setup
+  - Name: Exercise 1.1
+    File: exercise1.1
+  - Name: Exercise 1.2
+    File: exercise1.2
+  - Name: Exercise 1.3
+    File: exercise1.3
+  - Name: Exercise 1.4
+    File: exercise1.4
+  - Name: Exercise 1.5
+    File: exercise1.5
+  - Name: Exercise 1.6
+    File: exercise1.6
+  - Name: Wrap Up
+    File: wrapup
+
+---
+Name: Ansible Tower
+Dir: tower
+Topics:
+  - Name: Agenda
+    File: index
+  - Name: Setup
+    File: setup
+  - Name: Exercise 1.1
+    File: exercise1.1
+  - Name: Exercise 1.2
+    File: exercise1.2
+  - Name: Exercise 1.3
+    File: exercise1.3
+  - Name: Wrap Up
+    File: wrapup
+    
+---
+Name: Ansible Network
+Dir: network
+Topics:
+  - Name: Agenda
+    File: index
+  - Name: Setup
+    File: setup
+  - Name: Exercise 1.1
+    File: exercise1.1
+  - Name: Exercise 1.2
+    File: exercise1.2
+  - Name: Exercise 1.3
+    File: exercise1.3
+  - Name: Exercise 1.4
+    File: exercise1.4
+  - Name: Exercise 1.5
+    File: exercise1.5
+  - Name: Exercise 1.6
+    File: exercise1.6
+  - Name: Exercise 2.1
+    File: exercise2.1
+  - Name: Exercise 2.2
+    File: exercise2.2
+  - Name: Exercise 2.3
+    File: exercise2.3
+  - Name: Wrap Up
+    File: wrapup
+
+---
+Name: Ansible Security
+Dir: security
+Topics:
+  - Name: Agenda
+    File: index
+  - Name: Setup
+    File: setup
+
+---
+Name: Additional Resources
+Dir: resources
+Topics:
+  - Name: Links
+    File: links
+  - Name: Decks
+    File: decks

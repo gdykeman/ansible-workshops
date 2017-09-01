@@ -1,0 +1,106 @@
+:ios_config_url: http://docs.ansible.com/ansible/latest/ios_config_module.html
+:image_links: https://s3.amazonaws.com/ansible-workshop.redhatgov.io/_images
+
+
+= Exercise 1.3 - Creating a GRE Tunnel
+
+---
+
+****
+*Let's work on our next playbook, creating a GRE Tunnel between rtr1 & rtr2*
+
+Before we go into creating the playbook, let's look at what we're trying to accomplish. +
+- We have two VPC's, *VPC 1 & VPC 2 with rtr1 and rtr2* residing in each VPC respectively +
+- We are going to *bridge the two VPC's via a GRE Tunnel* between rtr1 and rtr2 +
+- We'll use the *GigabitEthernet1* interface on both routers to configure the tunnel
+====
+*Step 1:* Make sure you're in the networking-workshop directory +
+----
+cd ~/networking-workshop
+----
+
+====
+Before we go into creating the playbook, let's look at what we're trying to accomplish. +
+- We have two VPC's, *VPC 1 & VPC 2 with rtr1 and rtr2* residing in each VPC respectively +
+- We are going to *bridge the two VPC's via a GRE Tunnel* between rtr1 and rtr2 +
+- We'll use the *GigabitEthernet1* interface on both routers to configure the tunnel
+
+====
+*Step 2:* Let's create our playbook named gre.yml +
+----
+vim gre.yml
+----
+====
+====
+*Step 3:* Setting up your playbook +
+In this playbook, we'll be running two plays, one for each router. +
+Let's start with router 1. +
+Note that the "hosts:" is targeting *rtr1*
+[source,bash]
+----
+---
+- hosts: student(X)-rtr1.net-ws.redhatgov.io
+  name: create GRE Tunnel on R1
+  gather_facts: no
+----
+====
+====
+*Step 4:* Adding the tasks for R1 +
+[source,bash]
+----
+  tasks:
+    - name: create tunnel interface to R2
+      ios_config:
+        lines:
+         - ip address 10.0.0.1 255.255.255.0
+         - tunnel source GigabitEthernet1
+         - tunnel destination <IP of Router 2>
+      parents: interface Tunnel 0
+====
+====
+*Step 5:* Setting up the play for R2 +
+Note that the "hosts:" is targeting *rtr2*
+[source,bash]
+----
+- hosts: student(X)-rtr2.net-ws.redhatgov.io
+  name: create GRE Tunnel on R2
+  gather_facts: no
+----
+====
+====
+*Step 6:* Adding the tasks for R2 +
+[source,bash]
+----
+  tasks:
+    - name: create tunnel interface to R2
+      ios_config:
+        lines:
+         - ip address 10.0.0.2 255.255.255.0
+         - tunnel source GigabitEthernet1
+         - tunnel destination <IP of Router 1>
+      parents: interface Tunnel 0
+====
+[NOTE]
+image::greformat.png[caption="Figure 1: ", title="Completed Playbook - w/Spacing", link="{image_links}/greformat.png"]
+====
+Now that you've completed writing your playbook, let's go ahead and save it.
+
+Use the ```write/quit``` method in ```vim``` to save your playbook, i.e. ```hit Esc then :wq!```
+
+We now have our second playbook.  Let's go ahead and run that awesomeness!
+====
+====
+*Step 7:* Running the playbook +
+From your networking-workshop directory, run the gre.yml playbook
+----
+ansible-playbook gre.yml
+----
+====
+image::stdout_2.png[caption="Figure 1: ", title="GRE Playbook stdout", link="{image_links}/stdout_2.png"]
+---
+[NOTE]
+====
+- You've successfully created a playbook that targets both routers in sequential order. Woohoo!
+- The GRE Tunnel should be configured.  Feel free to log into any of the routers and ping the other endpoint of the tunnel
+- link:{ios_config_url}[Ansible ios_config module]
+====

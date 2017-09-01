@@ -1,0 +1,47 @@
+[[welcome-index]]
+= Ansible Resources
+{product-author}
+{product-version}
+:data-uri:
+:icons:
+:qsguide: https://www.ansible.com/get-started
+:videos: https://www.ansible.com/videos
+:wandt: https://www.ansible.com/webinars-training
+:docs: http://docs.ansible.com/
+:blog: https://www.ansible.com/blog
+:depth: https://www.ansible.com/ansible-in-depth-whitepaper
+:examples: https://github.com/ansible/ansible-examples
+:free_trial: https://www.ansible.com/tower-trial
+:install: http://docs.ansible.com/ansible/intro_installation.html
+
+[TIP]
+====
+[.lead]
+Welcome to Ansible Resources, where you can
+find information and guides to help you learn about Ansible and Ansible Tower
+
+[.lead]
+From getting started with creating your first automation, to trying out more
+advanced build and deployment techniques, these resources provide what you need
+to set up and manage your Ansible environment
+
+====
+
+'''
+link:{install}[Install Ansible]
+
+link:{free_trial}[Ansible Tower Free Trial]
+
+link:{docs}[Ansible and Ansible Tower Documentation]
+
+link:{qsguide}[Ansible Quick Start Guide]
+
+link:{videos}[Ansible Videos]
+
+link:{wandt}[Webinars and Training]
+
+link:{blog}[Ansible Blog]
+
+link:{depth}[Ansible In Depth]
+
+link:{examples}[Ansible Examples]
