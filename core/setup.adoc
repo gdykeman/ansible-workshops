@@ -37,7 +37,7 @@ Testing your environment
 * Open a terminal or terminal emulator (like PuTTy)
 * ssh to each one of your EC2 nodes/instances using ssh.
 * ssh <account name>@<IP address of node>
-- EXAMPLE: ```ssh bhirsch@52.62.1.8```
+- EXAMPLE: ```ssh student1@52.62.1.8```
 ====
 
 [IMPORTANT]
