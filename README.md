@@ -1,4 +1,4 @@
-# Asciidoc template for Red Hat Public Sector Workshops
+# Asciidoc template for Ansible Workshops
 
 ### Usage
 
