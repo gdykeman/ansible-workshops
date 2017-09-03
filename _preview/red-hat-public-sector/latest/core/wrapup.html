@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="ie8"> <![endif]-->
+<!--[if IE 9]> <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Ansible Workshops latest | Ansible Essentials | Wrap Up</title>
+  <link href="https://assets.openshift.net/content/subdomain.css" rel="stylesheet" type="text/css">
+  <link href="../../latest/_stylesheets/docs.css" rel="stylesheet" />
+  <link href="https://www.ansible.com/hs-fs/hub/330046/file-448313641-png/favicon.png" rel="apple-touch-icon-precomposed" type="image/png">
+  <link href="https://www.ansible.com/hs-fs/hub/330046/file-448313641-png/favicon.png" rel="shortcut icon" type="text/css">
+  <!--[if IE]><link rel="shortcut icon" href="https://www.ansible.com/hs-fs/hub/330046/file-448313641-png/favicon.png"><![endif]-->
+  <!-- or, set /favicon.ico for IE10 win -->
+  <meta content="OpenShift" name="application-name">
+  <meta content="#000000" name="msapplication-TileColor">
+  <meta content="https://www.ansible.com/hs-fs/hub/330046/file-448313641-png/favicon.png" name="msapplication-TileImage">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://assets.openshift.net/content/html5shiv.js" type="text/javascript"></script>
+    <script src="https://assets.openshift.net/content/respond.js" type="text/javascript"></script>
+    <link href="https://assets.openshift.net/content/vendor/respond-js/respond-proxy.html" id="respond-proxy" rel="respond-proxy">
+    <link href="../../latest/_images/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
+    <script src="../../latest/_javascripts/respond.proxy.js" type="text/javascript"></script>
+  <![endif]-->
+  <script src="https://assets.openshift.net/content/modernizr.js" type="text/javascript"></script>
+  <script src="https://assets.openshift.net/content/subdomain.js" type="text/javascript"></script>
+  <script src="../../latest/_javascripts/bootstrap-offcanvas.js" type="text/javascript"></script>
+  <script type="text/javascript" src="https://assets.openshift.net/app/assets/site/tracking.js"></script>
+</head>
+<body>
+  <div class="navbar navbar-default navbar-openshift" role="navigation">
+  <div class="navbar-header">
+    <div class="dropdown">
+      <a href="#" class="dropdown-toggle navbar-menu-toggle" data-toggle="dropdown">
+        <span class="navbar-menu-title">MENU</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <ul class="dropdown-menu navbar-menu" role="menu">
+        <li class="submenu">
+          <a href="#">Overview</a>
+          <ul id="submenu-overview" class="dropdown-submenu">
+            <li class="submenu-heading">Public Sector Workshop</li>
+            <li>
+                What is Ansible Tower?
+                <span class="submenu-item-desc">Extend the power of Ansible to your entire team. Ansible Tower by Red Hat helps you scale IT automation, manage complex deployments and speed productivity. Centralize and control your IT infrastructure with a visual dashboard, role-based access control, job scheduling and graphical inventory management.</span>
+              </a>
+            </li>
+            <li class="submenu-heading">Links</li>
+            <li>
+              <a href="https://www.ansible.com/tower">
+                Ansible Tower
+                <span class="submenu-item-desc">Learn more about Ansible Tower.</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.ansible.com/">
+                Ansible
+                <span class="submenu-item-desc">Ansible seamlessly unites workflow orchestration with configuration management, provisioning, and application deployment in one easy-to-use and deploy platform.</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://galaxy.ansible.com/">
+                Ansible Galaxy
+                <span class="submenu-item-desc">Jump-start your automation project with great content from the Ansible community. Galaxy provides pre-packaged units of work known to Ansible as roles. Roles can be dropped into Ansible PlayBooks and immediately put to work. You'll find roles for provisioning infrastructure, deploying applications, and all of the tasks you do everyday.</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="submenu">
+          <a href="#">Connect</a>
+          <ul id="submenu-connect" class="dropdown-submenu">
+            <li>
+              <a href="https://access.redhat.com/downloads/">
+                Downloads <i class="fa fa-external-link pull-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://dgshow.org/">
+                The Dave and Gunnar Show
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/redhatgov">
+                Twitter <i class="fa fa-external-link pull-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/ansibleautomation/">
+                Facebook <i class="fa fa-external-link pull-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/red-hat">
+                LinkedIn <i class="fa fa-external-link pull-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/RedHatGov">
+                GitHub <i class="fa fa-external-link pull-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://plus.google.com/+RedHat">
+                Google+ <i class="fa fa-external-link pull-right"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/user/RedHatVideos">
+                YouTube <i class="fa fa-external-link pull-right"></i>
+              </a>
+            </li>
+          </ul>
+        </li>
+      <li class="submenu">
+        <a href="#">Contact Us</a>
+        <ul id="submenu-connect" class="dropdown-submenu">
+          <li>
+             <a href="https://www.redhat.com/en/about/contact#na">
+             Contact Us
+             </a>
+          </li>
+        </ul>
+    </div>
+    <a class="navbar-brand red-hat-public-sector" href="/"></a>
+  </div>
+  <!-- <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="hidden-xs dropdown"> <a href="#" class="dropdown-toggle nav-log-in" data-toggle="dropdown"> My Account<span class="caret"></span> </a>
+        <ul class="dropdown-menu">
+          <li><a href="https://openshift.redhat.com/app/console">OpenShift Web Console</a></li>
+          <li><a href="https://console.preview.openshift.com/">(Next Gen) Web Console</a></li>
+          <li><a href="https://hub.openshift.com/users/auth/github">OpenShift Hub</a></li>
+        </ul>
+      </li>
+      <li class="hidden-xs hidden-sm"><a class="nav-sign-up" href="https://www.openshift.com/devpreview/register.html">Sign up for Free</a></li>
+    </ul>
+  </div> -->
+</div>
+  <div class="container">
+    <p class="toggle-nav visible-xs pull-left">
+      <button class="btn btn-default btn-sm" type="button" data-toggle="offcanvas">Toggle nav</button>
+    </p>
+    <ol class="breadcrumb">
+      <li class="sitename">
+        <a href="../../index.html">Ansible</a>
+      </li>
+      <li class="hidden-xs active">
+        <a href="../core/index.html">Ansible Workshops latest</a>
+      </li>
+      <li class="hidden-xs active">
+        <a href="../core/index.html">Ansible Essentials</a>
+      </li>
+      
+      <li class="hidden-xs active">
+        Wrap Up
+      </li>
+    </ol>
+    <div class="row row-offcanvas row-offcanvas-left">
+      <div class="col-xs-8 col-sm-3 col-md-3 sidebar sidebar-offcanvas">
+        <div class="row-fluid">
+          
+<script>
+  (function() {
+    var cx = '013769182564158614814:e-dp46b51vk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+
+        </div>
+        <ul class="nav nav-sidebar">
+    <li class="nav-header">
+      <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicGroup0">
+        <span id="tgSpan0" class="fa fa-angle-down"></span>Ansible Essentials
+      </a>
+      <ul id="topicGroup0" class="collapse in list-unstyled">
+            <li><a class="" href="../core/index.html">Agenda</a></li>
+            <li><a class="" href="../core/setup.html">Setup</a></li>
+            <li><a class="" href="../core/exercise1.1.html">Exercise 1.1</a></li>
+            <li><a class="" href="../core/exercise1.2.html">Exercise 1.2</a></li>
+            <li><a class="" href="../core/exercise1.3.html">Exercise 1.3</a></li>
+            <li><a class="" href="../core/exercise1.4.html">Exercise 1.4</a></li>
+            <li><a class="" href="../core/exercise1.5.html">Exercise 1.5</a></li>
+            <li><a class="" href="../core/exercise1.6.html">Exercise 1.6</a></li>
+            <li><a class=" active" href="../core/wrapup.html">Wrap Up</a></li>
+      </ul>
+    </li>
+    <li class="nav-header">
+      <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicGroup1">
+        <span id="tgSpan1" class="fa fa-angle-right"></span>Ansible Tower
+      </a>
+      <ul id="topicGroup1" class="collapse  list-unstyled">
+            <li><a class="" href="../tower/index.html">Agenda</a></li>
+            <li><a class="" href="../tower/setup.html">Setup</a></li>
+            <li><a class="" href="../tower/exercise1.1.html">Exercise 1.1</a></li>
+            <li><a class="" href="../tower/exercise1.2.html">Exercise 1.2</a></li>
+            <li><a class="" href="../tower/exercise1.3.html">Exercise 1.3</a></li>
+            <li><a class="" href="../tower/wrapup.html">Wrap Up</a></li>
+      </ul>
+    </li>
+    <li class="nav-header">
+      <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicGroup2">
+        <span id="tgSpan2" class="fa fa-angle-right"></span>Ansible Network
+      </a>
+      <ul id="topicGroup2" class="collapse  list-unstyled">
+            <li><a class="" href="../network/index.html">Agenda</a></li>
+            <li><a class="" href="../network/setup.html">Setup</a></li>
+            <li><a class="" href="../network/exercise1.1.html">Exercise 1.1</a></li>
+            <li><a class="" href="../network/exercise1.2.html">Exercise 1.2</a></li>
+            <li><a class="" href="../network/exercise1.3.html">Exercise 1.3</a></li>
+            <li><a class="" href="../network/exercise1.4.html">Exercise 1.4</a></li>
+            <li><a class="" href="../network/exercise1.5.html">Exercise 1.5</a></li>
+            <li><a class="" href="../network/exercise1.6.html">Exercise 1.6</a></li>
+            <li><a class="" href="../network/exercise2.1.html">Exercise 2.1</a></li>
+            <li><a class="" href="../network/exercise2.2.html">Exercise 2.2</a></li>
+            <li><a class="" href="../network/exercise2.3.html">Exercise 2.3</a></li>
+            <li><a class="" href="../network/wrapup.html">Wrap Up</a></li>
+      </ul>
+    </li>
+    <li class="nav-header">
+      <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicGroup3">
+        <span id="tgSpan3" class="fa fa-angle-right"></span>Ansible Security
+      </a>
+      <ul id="topicGroup3" class="collapse  list-unstyled">
+            <li><a class="" href="../security/index.html">Agenda</a></li>
+            <li><a class="" href="../security/setup.html">Setup</a></li>
+      </ul>
+    </li>
+    <li class="nav-header">
+      <a class="" href="javascript:void(0);" data-toggle="collapse" data-target="#topicGroup4">
+        <span id="tgSpan4" class="fa fa-angle-right"></span>Additional Resources
+      </a>
+      <ul id="topicGroup4" class="collapse  list-unstyled">
+            <li><a class="" href="../resources/links.html">Links</a></li>
+            <li><a class="" href="../resources/decks.html">Decks</a></li>
+      </ul>
+    </li>
+</ul>
+      </div>
+      <div class="col-xs-12 col-sm-9 col-md-9 main">
+        <div class="page-header">
+          <h2>Wrap Up and Q&amp;A</h2>
+        </div>
+        <div class="paragraph">
+<p>That wraps up what we have planned for today.  We hope you&#8217;ve learned something valuable<br>
+about Ansible and Ansible Tower that you can apply in your daily role.</p>
+</div>
+<div class="paragraph">
+<p>What do you think? How can we help you understand Ansible Tower better?</p>
+</div>
+<div class="paragraph">
+<p>Before you leave, check out the <strong>Resources</strong> page that is part of this guide.  There you can<br>
+find a ton of links that will further your Ansible education.</p>
+</div>
+<div class="paragraph">
+<p>This <strong>Participant Guide</strong> will remain active for the next two weeks.  Please take advantage<br>
+of it by creating your own Ansible and Ansible Tower environment back at your organization.</p>
+</div>
+<div class="paragraph">
+<p>Thank you for your time and participation!</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuNCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMiIgYmFzZVByb2ZpbGU9InRpbnkiIGlkPSJsb2dvIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIgoJIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTI4cHgiIGhlaWdodD0iNDJweCIgdmlld0JveD0iMTIyLjQzMSAzMzcuNjIzIDEyOCA0MiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnIGlkPSJsb2dvXzFfIj4KCTxnIGlkPSJ3aGl0ZSI+CgkJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTE2MC4yMzMsMzY5Ljc5Yy0wLjc5Mi0wLjE4Mi0xLjYzMi0wLjI5Ni0yLjQ4MS0wLjI5NmMtMS40NTMsMC0yLjc3NSwwLjI1MS0zLjc1MSwwLjY1OAoJCQljLTAuMTA3LDAuMDUzLTAuMTg0LDAuMTY2LTAuMTg0LDAuMjkzYzAsMC4wNDcsMC4wMTIsMC4wOTQsMC4wMjksMC4xMzRjMC4xMTUsMC4zMzMtMC4wNzQsMC42OTYtMS4wMTgsMC45MDQKCQkJYy0xLjM5OSwwLjMwNy0yLjI4MywxLjc1MS0yLjc4OCwyLjIzYy0wLjU5NCwwLjU2NC0yLjI3MSwwLjkxLTIuMDE4LDAuNTc0YzAuMTk3LTAuMjYyLDAuOTUyLTEuMDgyLDEuNDExLTEuOTY3CgkJCWMwLjQxMS0wLjc5MiwwLjc3Ni0xLjAxNywxLjI4LTEuNzcyYzAuMTQ3LTAuMjIxLDAuNzItMSwwLjg4Ny0xLjYxNWMwLjE4Ny0wLjYwMSwwLjEyNC0xLjM1NSwwLjE5Ni0xLjY2NgoJCQljMC4xMDMtMC40NDgsMC41MjYtMS40MTksMC41NTgtMS45NjhjMC4wMTktMC4zMTEtMS4yOTYsMC40NDMtMS45MTksMC40NDNzLTEuMjMtMC4zNzQtMS43ODgtMC40CgkJCWMtMC42ODktMC4wMzItMS4xMzIsMC41MzItMS43NTYsMC40MzNjLTAuMzU1LTAuMDU3LTAuNjU2LTAuMzcxLTEuMjc4LTAuMzk0Yy0wLjg4Ni0wLjAzMi0xLjk2OSwwLjQ5My00LjAwMywwLjQyOAoJCQljLTItMC4wNjUtMy44NDktMi41MjktNC4xMDEtMi45MjFjLTAuMjk1LTAuNDU5LTAuNjU3LTAuNDU5LTEuMDUtMC4wOThjLTAuMzk0LDAuMzYtMC44NzksMC4wNzctMS4wMTgtMC4xNjYKCQkJYy0wLjI2Mi0wLjQ1OC0wLjk2My0xLjgtMi4wNS0yLjA4MmMtMS41MDMtMC4zOS0yLjI2NCwwLjgzMi0yLjE2NSwxLjgwNGMwLjEwMSwwLjk4NiwwLjczOCwxLjI2MywxLjAzNCwxLjc4OAoJCQljMC4yOTUsMC41MjUsMC40NDYsMC44NjIsMS4wMDIsMS4wOTVjMC4zOTQsMC4xNjUsMC41NCwwLjQwNywwLjQyMywwLjczMWMtMC4xMDMsMC4yODEtMC41MTMsMC4zNDYtMC43ODIsMC4zNTkKCQkJYy0wLjU3MiwwLjAyNy0wLjk3NC0wLjEyOC0xLjI2Ny0wLjMxNGMtMC4zNC0wLjIxOC0wLjYxNy0wLjUxOS0wLjkxNS0xLjAzYy0wLjM0NC0wLjU2NC0wLjg4NS0wLjgxMS0xLjUxNi0wLjgxMQoJCQljLTAuMzAxLDAtMC41ODIsMC4wNzktMC44MzIsMC4yMDhjLTAuOTg5LDAuNTE1LTIuMTY1LDAuODE5LTMuNDMyLDAuODE5bC0xLjQyOSwwLjAwMWMyLjc0LDguMTI1LDEwLjQyMywxMy45NzcsMTkuNDczLDEzLjk3NwoJCQlDMTUwLjIxNCwzNzkuMTY3LDE1Ni41NzIsMzc1LjQzNSwxNjAuMjMzLDM2OS43OXoiLz4KCTwvZz4KCTxnIGlkPSJibGFjayI+CgkJPGc+CgkJCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xNjMuMzIyLDM2OC42OTNoMC4xODZsMC4yOCwwLjQ1OWgwLjE4bC0wLjMwMy0wLjQ2OGMwLjE1Ny0wLjAxOSwwLjI3Ni0wLjEwMSwwLjI3Ni0wLjI5CgkJCQljMC0wLjIxLTAuMTI0LTAuMzAyLTAuMzc0LTAuMzAyaC0wLjQwNHYxLjA2aDAuMTZWMzY4LjY5M0wxNjMuMzIyLDM2OC42OTN6IE0xNjMuMzIyLDM2OC41NTd2LTAuMzI5aDAuMjE5CgkJCQljMC4xMTEsMCwwLjIzMSwwLjAyNSwwLjIzMSwwLjE1NmMwLDAuMTYzLTAuMTIxLDAuMTczLTAuMjU3LDAuMTczSDE2My4zMjJMMTYzLjMyMiwzNjguNTU3eiIvPgoJCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTY0LjU1MSwzNjguNjI0YzAsMC41NzItMC40NjUsMS4wMzgtMS4wMzgsMS4wMzhjLTAuNTczLDAtMS4wMzktMC40NjYtMS4wMzktMS4wMzgKCQkJCWMwLTAuNTczLDAuNDY2LTEuMDM5LDEuMDM5LTEuMDM5QzE2NC4wODYsMzY3LjU4NSwxNjQuNTUxLDM2OC4wNTEsMTY0LjU1MSwzNjguNjI0eiBNMTYzLjUxMywzNjcuNzY5CgkJCQljLTAuNDcyLDAtMC44NTUsMC4zODMtMC44NTUsMC44NTVjMCwwLjQ3MSwwLjM4MywwLjg1MiwwLjg1NSwwLjg1MmMwLjQ3MSwwLDAuODU0LTAuMzgxLDAuODU0LTAuODUyCgkJCQlDMTY0LjM2NiwzNjguMTUyLDE2My45ODQsMzY3Ljc2OSwxNjMuNTEzLDM2Ny43Njl6Ii8+CgkJPC9nPgoJCTxnPgoJCQk8cGF0aCBkPSJNMTYwLjIzMywzNjkuNzkyYy0wLjc5Mi0wLjE4My0xLjYzMi0wLjI5Ni0yLjQ4MS0wLjI5NmMtMS40NTMsMC0yLjc3NSwwLjI1Mi0zLjc1MSwwLjY1NwoJCQkJYy0wLjEwNywwLjA1NC0wLjE4NCwwLjE2Ni0wLjE4NCwwLjI5NGMwLDAuMDQ2LDAuMDEyLDAuMDk1LDAuMDI5LDAuMTMzYzAuMTE1LDAuMzM0LTAuMDc0LDAuNjk3LTEuMDE4LDAuOTA0CgkJCQljLTEuMzk5LDAuMzA4LTIuMjgzLDEuNzUxLTIuNzg4LDIuMjMyYy0wLjU5NCwwLjU2Mi0yLjI3MSwwLjkxLTIuMDE4LDAuNTc0YzAuMTk3LTAuMjYzLDAuOTUyLTEuMDgzLDEuNDExLTEuOTY4CgkJCQljMC40MTEtMC43OTEsMC43NzYtMS4wMTcsMS4yOC0xLjc3MWMwLjE0Ny0wLjIyMiwwLjcyLTEsMC44ODctMS42MTZjMC4xODctMC42MDEsMC4xMjQtMS4zNTUsMC4xOTYtMS42NjYKCQkJCWMwLjEwMy0wLjQ0OCwwLjUyNi0xLjQxOSwwLjU1OC0xLjk2OGMwLjAxOS0wLjMxLTEuMjk2LDAuNDQyLTEuOTE5LDAuNDQycy0xLjIzLTAuMzczLTEuNzg4LTAuNAoJCQkJYy0wLjY4OS0wLjAzMy0xLjEzMiwwLjUzMi0xLjc1NiwwLjQzM2MtMC4zNTUtMC4wNTctMC42NTYtMC4zNy0xLjI3OC0wLjM5NGMtMC44ODYtMC4wMzMtMS45NjksMC40OTMtNC4wMDMsMC40MjcKCQkJCWMtMi0wLjA2NC0zLjg0OS0yLjUyOC00LjEwMS0yLjkxOWMtMC4yOTUtMC40Ni0wLjY1Ny0wLjQ2LTEuMDUtMC4wOTljLTAuMzk0LDAuMzYtMC44NzksMC4wNzctMS4wMTgtMC4xNjUKCQkJCWMtMC4yNjItMC40NTktMC45NjMtMS44MDItMi4wNS0yLjA4M2MtMS41MDMtMC4zOS0yLjI2NCwwLjgzMi0yLjE2NSwxLjgwNGMwLjEwMSwwLjk4NiwwLjczOCwxLjI2MywxLjAzNCwxLjc4NwoJCQkJYzAuMjk1LDAuNTI1LDAuNDQ2LDAuODY1LDEuMDAyLDEuMDk3YzAuMzk0LDAuMTYzLDAuNTQsMC40MDcsMC40MjMsMC43M2MtMC4xMDMsMC4yODItMC41MTMsMC4zNDYtMC43ODIsMC4zNTkKCQkJCWMtMC41NzIsMC4wMjctMC45NzQtMC4xMjgtMS4yNjctMC4zMTZjLTAuMzQtMC4yMTYtMC42MTctMC41MTgtMC45MTUtMS4wM2MtMC4zNDQtMC41NjQtMC44ODUtMC44MS0xLjUxNi0wLjgxCgkJCQljLTAuMzAxLDAtMC41ODIsMC4wOC0wLjgzMiwwLjIwOGMtMC45ODksMC41MTQtMi4xNjUsMC44MTktMy40MzIsMC44MTloLTEuNDI5Yy0wLjY5Ni0yLjA2Mi0xLjA3Mi00LjI3MS0xLjA3Mi02LjU2OAoJCQkJYzAtMTEuMzQ3LDkuMTk5LTIwLjU0NSwyMC41NDUtMjAuNTQ1YzExLjM0NywwLDIwLjU0NSw5LjE5OCwyMC41NDUsMjAuNTQ1QzE2My41MywzNjIuNzQxLDE2Mi4zMTksMzY2LjU3NSwxNjAuMjMzLDM2OS43OTJ6Ii8+CgkJPC9nPgoJCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xNzQuMDAzLDM1OS45MTljMC0xLjg4NC0wLjAzOS0zLjI3LTAuMTE1LTQuNTIzaDMuMDgybDAuMTMyLDIuNjczaDAuMTAxCgkJCWMwLjY5Mi0xLjk4MSwyLjMzNC0yLjk5MiwzLjg1My0yLjk5MmMwLjM0OCwwLDAuNTUsMC4wMTMsMC44MzQsMC4wNzd2My4zNTNjLTAuMzMzLTAuMDY2LTAuNjQ0LTAuMTAyLTEuMDcyLTAuMTAyCgkJCWMtMS42OTYsMC0yLjg3MywxLjA3OS0zLjE5LDIuNjkyYy0wLjA2LDAuMzEzLTAuMDkyLDAuNjktMC4wOTIsMS4wNzR2Ny4yOTloLTMuNTYyTDE3NC4wMDMsMzU5LjkxOXoiLz4KCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTg2LjE4NywzNjMuMzkyYzAuMDk0LDIuNTUsMi4wNjgsMy42NjcsNC4zNDgsMy42NjdjMS42MzcsMCwyLjgwOC0wLjI1NiwzLjg4NC0wLjY1MmwwLjUyNywyLjQ0OQoJCQljLTEuMjA0LDAuNTExLTIuODc2LDAuODkzLTQuOTE4LDAuODkzYy00LjU3MSwwLTcuMjQ5LTIuODIzLTcuMjQ5LTcuMTM1YzAtMy44ODUsMi4zNTYtNy41NjEsNi44ODQtNy41NjEKCQkJYzQuNTc3LDAsNi4wNjYsMy43NjQsNi4wNjYsNi44NDZjMCwwLjY2MS0wLjA1OSwxLjE5Mi0wLjEyNiwxLjUyMUwxODYuMTg3LDM2My4zOTJ6IE0xOTIuMzc3LDM2MC45MTIKCQkJYzAuMDE2LTEuMzA0LTAuNTUxLTMuNDMtMi45MzUtMy40M2MtMi4xOTEsMC0zLjEwMiwxLjk4OC0zLjI2MiwzLjQzSDE5Mi4zNzd6Ii8+CgkJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIwNy41MDYsMzYzLjM2OGMwLDAuMzczLTAuMDI2LDAuNzIxLTAuMTA4LDEuMDM4Yy0wLjM1OCwxLjU0MS0xLjYxOCwyLjUzMy0zLjA3MywyLjUzMwoJCQljLTIuMjQxLDAtMy41MjMtMS44ODktMy41MjMtNC40NzZjMC0yLjYxMSwxLjI3MS00LjYzMiwzLjU2My00LjYzMmMxLjYwMSwwLDIuNzQ2LDEuMTI4LDMuMDYxLDIuNDk5CgkJCWMwLjA2MSwwLjI4OCwwLjA4LDAuNjQ0LDAuMDgsMC45MjhWMzYzLjM2OHogTTIxMS4wNjIsMzQ5Ljk3NmwtMy41NTctMS4wMDN2Ny45MzloLTAuMDU5Yy0wLjYyOS0xLjA0LTIuMDE4LTEuODMzLTMuOTQ0LTEuODMzCgkJCWMtMy4zODUsMC02LjMzMiwyLjgwMS02LjMxMSw3LjUxN2MwLDQuMzI3LDIuNjYyLDcuMTkzLDYuMDIzLDcuMTkzYzIuMDMxLDAsMy43MjktMC45NjgsNC41Ny0yLjU0NGgwLjA2M2wwLjE1OSwyLjIyOWgzLjE3MQoJCQljLTAuMDY1LTAuOTU3LTAuMTE3LTIuNTA3LTAuMTE3LTMuOTQ4VjM0OS45NzZMMjExLjA2MiwzNDkuOTc2eiIvPgoJCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yMjAuNDc0LDM1NS4wNjJjLTEuMDcyLDAtMi4wMzIsMC4zMDktMi44MzksMC44MDdjLTAuODM4LDAuNDkxLTEuNTE5LDEuMjQ4LTEuOTI1LDIuMDMyaC0wLjA1NnYtNi41ODgKCQkJbC0xLjM5NC0wLjQxMnYxOC41N2gxLjM5NHYtOC42MTVjMC0wLjU3MiwwLjA0My0wLjk3LDAuMTg5LTEuMzg4YzAuNjAyLTEuNzUzLDIuMjUzLTMuMTksNC4yNDktMy4xOQoJCQljMi44ODQsMCwzLjg4MiwyLjMxMywzLjg4Miw0Ljg1djguMzQzaDEuMzkydi04LjQ5N0MyMjUuMzY3LDM1NS43MjgsMjIxLjgwOSwzNTUuMDYyLDIyMC40NzQsMzU1LjA2MnoiLz4KCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjM3Ljg3MSwzNjYuMTI1YzAsMS4xMTQsMC4wNDUsMi4yNjgsMC4yMDYsMy4zNDZoLTEuMjgzbC0wLjIwNS0yLjAxOWgtMC4wNjYKCQkJYy0wLjY4MywxLjA4NS0yLjI1MiwyLjMzOS00LjQ5MSwyLjMzOWMtMi44MzQsMC00LjE1My0xLjk5My00LjE1My0zLjg3MmMwLTMuMjUxLDIuODctNS4yMSw4LjYwMS01LjE1di0wLjM3NgoJCQljMC0xLjM5NC0wLjI3MS00LjE3My0zLjYwMy00LjE1MWMtMS4yMzMsMC0yLjUxNywwLjMzLTMuNTM2LDEuMDQ5bC0wLjQ0My0xLjAxM2MxLjI4Ny0wLjg3MiwyLjg1OC0xLjIxNyw0LjEzMi0xLjIxNwoJCQljNC4wNjUsMCw0Ljg0MywzLjA1Miw0Ljg0Myw1LjU2OVYzNjYuMTI1TDIzNy44NzEsMzY2LjEyNXogTTIzNi40NzgsMzYxLjk0MmMtMy4wNjctMC4wODgtNy4xMTgsMC4zNzYtNy4xMTgsMy43NTkKCQkJYzAsMi4wMjQsMS4zMzYsMi45MzQsMi44MDQsMi45MzRjMi4zNDgsMCwzLjY4Mi0xLjQ1Myw0LjE2OC0yLjgyNGMwLjEwMS0wLjMwMSwwLjE0Ni0wLjYwMywwLjE0Ni0wLjg0NFYzNjEuOTQyTDIzNi40NzgsMzYxLjk0MnoKCQkJIi8+CgkJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTI0My40MTgsMzUyLjI4djMuMTA0aDQuMDE2djEuMTNoLTQuMDE2djkuMTU2YzAsMS43OTEsMC41NTYsMi45MTMsMi4wNywyLjkxMwoJCQljMC43MjYsMCwxLjIzOS0wLjA5NSwxLjYtMC4yMjFsMC4xNjksMS4wNzljLTAuNDU1LDAuMTkxLTEuMDk0LDAuMzM5LTEuOTQ0LDAuMzM5Yy0xLjAyOCwwLTEuODgtMC4zMjQtMi40MzEtMQoJCQljLTAuNjM4LTAuNzQtMC44NTYtMS45MjItMC44NTYtMy4zNTl2LTguOTA4aC0yLjM3OHYtMS4xM2gyLjM3OHYtMi41OUwyNDMuNDE4LDM1Mi4yOHoiLz4KCQk8Zz4KCQkJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTI0OS4xOTQsMzY4LjcyMmgwLjE4NWwwLjI3OSwwLjQ1OGgwLjE4MWwtMC4zMDItMC40NjhjMC4xNTctMC4wMTksMC4yNzYtMC4xMDEsMC4yNzYtMC4yOQoJCQkJYzAtMC4yMS0wLjEyNS0wLjMwMi0wLjM3NS0wLjMwMmgtMC40MDR2MS4wNmgwLjE2MVYzNjguNzIyTDI0OS4xOTQsMzY4LjcyMnogTTI0OS4xOTQsMzY4LjU4NXYtMC4zMjloMC4yMTgKCQkJCWMwLjExLDAsMC4yMzEsMC4wMjQsMC4yMzEsMC4xNTVjMCwwLjE2My0wLjEyMSwwLjE3My0wLjI1OCwwLjE3M0wyNDkuMTk0LDM2OC41ODVMMjQ5LjE5NCwzNjguNTg1eiIvPgoJCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjUwLjQyMywzNjguNjUxYzAsMC41NzMtMC40NjYsMS4wMzgtMS4wMzksMS4wMzhjLTAuNTcyLDAtMS4wMzgtMC40NjUtMS4wMzgtMS4wMzgKCQkJCWMwLTAuNTczLDAuNDY3LTEuMDM4LDEuMDM4LTEuMDM4QzI0OS45NTgsMzY3LjYxMywyNTAuNDIzLDM2OC4wNzgsMjUwLjQyMywzNjguNjUxeiBNMjQ5LjM4NCwzNjcuNzk2CgkJCQljLTAuNDczLDAtMC44NTQsMC4zODMtMC44NTQsMC44NTVjMCwwLjQ3MSwwLjM4MSwwLjg1MiwwLjg1NCwwLjg1MmMwLjQ3MiwwLDAuODU0LTAuMzgxLDAuODU0LTAuODUyCgkJCQlDMjUwLjIzOCwzNjguMTc5LDI0OS44NTUsMzY3Ljc5NiwyNDkuMzg0LDM2Ny43OTZ6Ii8+CgkJPC9nPgoJCTxwYXRoIGQ9Ik0xNDcuNTEsMzY3LjkwN2MwLjEwNSwwLjEwMywwLjI4OCwwLjQ1MSwwLjA2NSwwLjg5Yy0wLjEyNSwwLjIzMy0wLjI1OSwwLjM5Ny0wLjUsMC41ODkKCQkJYy0wLjI4OSwwLjIzMi0wLjg1NCwwLjQ5OS0xLjYyOSwwLjAwOGMtMC40MTYtMC4yNjQtMC40NDEtMC4zNTQtMS4wMTctMC4yNzljLTAuNDExLDAuMDU0LTAuNTc0LTAuMzYtMC40MjctMC43MDYKCQkJYzAuMTQ4LTAuMzQ0LDAuNzU1LTAuNjIzLDEuNTA5LTAuMThjMC4zNCwwLjE5OSwwLjg2OSwwLjYyMSwxLjMzMywwLjI0OGMwLjE5Mi0wLjE1NCwwLjMwNy0wLjI1NiwwLjU3My0wLjU2NQoJCQljMC4wMTMtMC4wMTMsMC4wMjktMC4wMjEsMC4wNDgtMC4wMjFDMTQ3LjQ4MywzNjcuODkxLDE0Ny40OTksMzY3Ljg5OCwxNDcuNTEsMzY3LjkwN3oiLz4KCTwvZz4KCTxwYXRoIGlkPSJyZWQiIGZpbGw9IiNDQzAwMDAiIGQ9Ik0xNDEuMzg2LDM0Ny44NjFjLTIuMzczLDAuMTcxLTIuNjE5LDAuNDI4LTMuMDY0LDAuOTAxYy0wLjYyNywwLjY2Ny0xLjQ1My0wLjg2Ni0xLjQ1My0wLjg2NgoJCWMtMC40OTUtMC4xMDQtMS4wOTYtMC45MDMtMC43NzItMS42NDljMC4zMTktMC43MzgsMC45MDktMC41MTYsMS4wOTQtMC4yODdjMC4yMjUsMC4yOCwwLjcwNSwwLjczNywxLjMyOCwwLjcyMQoJCWMwLjYyMy0wLjAxNiwxLjM0Mi0wLjE0NywyLjM0NC0wLjE0N2MxLjAxNiwwLDEuNjk5LDAuMzc5LDEuNzM3LDAuNzA1QzE0Mi42MzIsMzQ3LjUxNywxNDIuNTE3LDM0Ny43NzksMTQxLjM4NiwzNDcuODYxegoJCSBNMTQzLjg3OSwzNDMuOTRjLTAuMDAzLDAtMC4wMDcsMC0wLjAxMSwwYy0wLjAzNywwLTAuMDY2LTAuMDI4LTAuMDY2LTAuMDYyYzAtMC4wMjUsMC4wMTUtMC4wNDYsMC4wMzgtMC4wNTcKCQljMC40Ni0wLjI0MywxLjE0Ni0wLjQzNywxLjkzMi0wLjUxN2MwLjIzNi0wLjAyNCwwLjQ2Ni0wLjAzNiwwLjY4OC0wLjAzOGMwLjAzOSwwLDAuMDc4LDAsMC4xMTcsMAoJCWMxLjMxNywwLjAzLDIuMzcxLDAuNTUzLDIuMzU1LDEuMTY4Yy0wLjAxNiwwLjYxNy0xLjA5NSwxLjA5Mi0yLjQxMiwxLjA2MmMtMC40MjYtMC4wMS0wLjgyNy0wLjA3Mi0xLjE3MS0wLjE3MQoJCWMtMC4wNDEtMC4wMTEtMC4wNy0wLjA0NS0wLjA3LTAuMDg2czAuMDMtMC4wNzcsMC4wNzEtMC4wODdjMC44MjItMC4xOSwxLjM3Ni0wLjUwMSwxLjMzNy0wLjc5NAoJCWMtMC4wNTEtMC4zODktMS4xMjYtMC42MDItMi40LTAuNDczQzE0NC4xNDcsMzQzLjkwMSwxNDQuMDExLDM0My45MTksMTQzLjg3OSwzNDMuOTR6IE0xNTQuNTc5LDM1My4xNTcKCQljLTAuMjA0LDAuNjgzLTAuNDkyLDEuNTU1LTEuNzc2LDIuMjE1Yy0wLjE4OCwwLjA5Ni0wLjI1OS0wLjA2Mi0wLjE3Mi0wLjIwOWMwLjQ4NS0wLjgyNSwwLjU3Mi0xLjAzMiwwLjcxMy0xLjM1NwoJCWMwLjE5Ny0wLjQ3NywwLjMwMS0xLjE1NC0wLjA5Mi0yLjU2N2MtMC43NzMtMi43ODEtMi4zODUtNi40OTgtMy41NTctNy43MDNjLTEuMTMtMS4xNjQtMy4xNzktMS40OTEtNS4wMzEtMS4wMTYKCQljLTAuNjgzLDAuMTc1LTIuMDE2LDAuODY5LTQuNDkxLDAuMzEyYy00LjI4Mi0wLjk2NS00LjkxNywxLjE4LTUuMTYyLDIuMTEzYy0wLjI0NiwwLjkzNS0wLjgzNiwzLjU4OS0wLjgzNiwzLjU4OQoJCWMtMC4xOTcsMS4wODItMC40NTQsMi45NjIsNi4xOTUsNC4yMjljMy4wOTgsMC41ODksMy4yNTUsMS4zOSwzLjM5MiwxLjk2NmMwLjI0NywxLjAzMiwwLjYzOSwxLjYyMywxLjA4MiwxLjkxOAoJCWMwLjQ0MiwwLjI5NiwwLDAuNTQtMC40OTEsMC41OWMtMS4zMTksMC4xMzctNi4xOTUtMS4yNjEtOS4wOC0yLjljLTIuMzYtMS40NDItMi4zOTktMi43NDEtMS44NTktMy44NDIKCQljLTMuNTY1LTAuMzg2LTYuMjQxLDAuMzM0LTYuNzI1LDIuMDIxYy0wLjgzMywyLjg5Niw2LjM2Nyw3Ljg0NCwxNC41NjYsMTAuMzI3YzguNjA0LDIuNjA1LDE3LjQ1NCwwLjc4NiwxOC40MzgtNC42MjIKCQlDMTYwLjEzOSwzNTUuNzYyLDE1OC4wNjksMzUzLjk0NCwxNTQuNTc5LDM1My4xNTd6Ii8+CjwvZz4KPC9zdmc+Cg==" alt="redhat">
+</div>
+</div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    /*<![CDATA[*/
+    $(document).ready(function() {
+      $("[id^='topicGroup']").on('show.bs.collapse', function (event) {
+        if (!($(event.target).attr('id').match(/^topicSubGroup/))) {
+          $(this).parent().find("[id^='tgSpan']").toggleClass("fa-angle-right fa-angle-down");
+        }
+      });
+      $("[id^='topicGroup']").on('hide.bs.collapse', function (event) {
+        if (!($(event.target).attr('id').match(/^topicSubGroup/))) {
+          $(this).parent().find("[id^='tgSpan']").toggleClass("fa-angle-right fa-angle-down");
+        }
+      });
+      $("[id^='topicSubGroup']").on('show.bs.collapse', function () {
+        $(this).parent().find("[id^='sgSpan']").toggleClass("fa-caret-right fa-caret-down");
+      });
+      $("[id^='topicSubGroup']").on('hide.bs.collapse', function () {
+        $(this).parent().find("[id^='sgSpan']").toggleClass("fa-caret-right fa-caret-down");
+      });
+    });
+    /*]]>*/
+  </script>
+    <footer class="footer-openshift">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-3 logo">
+        <a href="https://www.redhat.com/"></a>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-6 text-center">
+        <div class="row">
+          <div class="col-xs-12 col-md-4">
+            <a href="https://www.redhat.com/en/about/privacy-policy">
+              Privacy Policy
+            </a>
+          </div>
+          <div class="col-xs-12 col-md-4">
+          <a href="https://www.redhat.com/en/about/terms-use">
+            Terms and Conditions
+          </a>
+          </div>
+          <div class="col-xs-12 col-md-4">
+          <a href="https://www.redhat.com/en/technologies/industries/government">
+            Public Sector
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-3 text-right">
+        <a id="built_with_asciibinder" href="http://asciibinder.org/">
+          <img src="../../latest/_images/asciibinder_web_logo.svg" alt="AsciiBinder" />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

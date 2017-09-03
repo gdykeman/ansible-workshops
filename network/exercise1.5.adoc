@@ -10,30 +10,20 @@ it actually runs.
 So, lets do that now.
 
 [.lead]
-Section 1 - Running your new apache playbook
+Section 1 - Running your routing_configs playbook
 
 ====
-*Step 1:* Make sure you are in the right directory and create a host file.
+*Step 1:* Make sure you are in the right directory.
 
 ----
-% cd ~/apache-basic-playbook
-----
-
-[NOTE]
-Since you already did the work of creating a host file in Lession 1.0, feel free to just copy `hosts` from
-your `apache_basic` project.  Or, hey... if you like to type, create a new file called `hosts` and put this in it.
-
-----
-[web]
-node-1 ansible_host=<IP Address of your node-1>
-node-2 ansible_host=<IP Address of your node-2>
+cd ~/networking-workshop
 ----
 
 *Step 2:* Run your playbook
 ----
-% ansible-playbook -i ./hosts site.yml -k
+ansible-playbook router_configs.yml
 ----
-
+====
 ***
 [.lead]
 Section 2: Review
@@ -41,4 +31,19 @@ Section 2: Review
 If successful, you should see standard output that looks very similar to the following.  If not, just let us
 know.  We'll help get things fixed up.
 
-image::stdout_2.png[caption="Figure 1: ", title="apache-basic-playbook stdout"]
+image::routing.png[caption="Figure 1: ", title="routing_configs stdout"]
+
+[NOTE]
+
+*If the output is similar to the above, you have successfully run the playbook.  Woohoo!!!* +
+
+So, let's briefly review what we accomplished:
+
+- We declared variables that lists the name servers we want to apply.
+- We then registered the values produced by the ios_facts module to use in the subsequent tasks in our playbook.
+- Next we created a block with 2 conditionals {router version & inventory_hostname}
+- If the conditionals were met, for rtr1, we applied the static route and name server configuration.
+- For rtr2 we enabled GigabitEthernet2 & configured it to receive an IP address from DHCP + the similar configurations that rtr1 received. {Static route & name servers}
+
+
+***

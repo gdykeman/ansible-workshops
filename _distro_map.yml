@@ -8,5 +8,5 @@ red-hat-public-sector:
   site_url: https://docs.redhatgov.io/
   branches:
     master:
-      name: 'latest'
-      dir: 'latest'
+      name: 'standard'
+      dir: 'standard'
