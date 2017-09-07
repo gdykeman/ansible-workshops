@@ -149,7 +149,7 @@ image::routing_syntax.png[caption="Figure 5: ", title="Completed Playbook - w/Sp
     ##Configuration for R1
     - block:
       - name: Static route from R1 to R2
-        ios_config:
+        net_static_route:
           lines:
             - ip route 172.18.2.0 255.255.255.0 10.0.0.2
       - name: configure name servers
