@@ -121,6 +121,9 @@ However, it's sometimes preferred to break out the tasks according to what is be
 - `net_system:` This module, similar to the net_interface allows us to manage the system attributes on network devices in an agnostic way.
 We're utilizing this module along with loops to feed in the name_servers we want the router to have.
 
+- `net_static_route:` This module is utilized for managing static IP routes on network devices.  It provides declarative
+management of static IP routes on network devices.
+
 ***
 ====
 [.lead]
