@@ -21,6 +21,12 @@
 # The ordering of the records in this document determines the ordering of the
 # topic groups and topics on the main page.
 ---
+Name: Getting Started
+Dir: welcome
+Topics:
+  - Name: Welcome
+    File: index
+---
 Name: Ansible Essentials
 Dir: core
 Topics:
@@ -102,8 +108,6 @@ Topics:
 Name: Additional Resources
 Dir: resources
 Topics:
-  - Name: Welcome
-    File: index
   - Name: Links
     File: links
   - Name: Decks
