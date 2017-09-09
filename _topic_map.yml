@@ -59,7 +59,7 @@ Topics:
     File: exercise1.3
   - Name: Wrap Up
     File: wrapup
-    
+
 ---
 Name: Ansible Network
 Dir: network
@@ -102,6 +102,8 @@ Topics:
 Name: Additional Resources
 Dir: resources
 Topics:
+  - Name: Welcome
+    File: welcome
   - Name: Links
     File: links
   - Name: Decks
