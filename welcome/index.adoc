@@ -14,13 +14,13 @@
 :free_trial: https://www.ansible.com/tower-trial
 :install: http://docs.ansible.com/ansible/intro_installation.html
 
-====
+
+---
 
 [.lead]
 Welcome to the Ansible Workshops repository, where you can
 find information and guides to help you learn about Ansible!
 
-====
 [NOTE]
 ====
 [.lead]
@@ -32,11 +32,9 @@ find information and guides to help you learn about Ansible!
 [.lead]
 - It uses no agents and no additional custom security infrastructure, so it's easy to deploy - and most importantly, it uses a very simple language (YAML, in the form of Ansible Playbooks) that allow you to describe your automation jobs in a way that approaches plain English.
 ====
-====
+
 [.lead]
 Please browse to the appropriate ansible workshop on the left to get started.
 
 [.lead]
 Happy learning!
-
-====
