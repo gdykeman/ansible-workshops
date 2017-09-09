@@ -103,7 +103,7 @@ Name: Additional Resources
 Dir: resources
 Topics:
   - Name: Welcome
-    File: welcome
+    File: index
   - Name: Links
     File: links
   - Name: Decks
