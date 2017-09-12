@@ -66,7 +66,8 @@ image::routing1.png[caption="Figure 1: ", title="Step 2 - w/Spacing", link="{ima
 ---
 
 
-*Step 3:* Add the first task to capture the ios_facts.  Make sure the *t* in tasks lines up with the *v* in vars.
+*Step 3:* Add the first task to capture the ios_facts.  Make sure the *t* in tasks lines up with the *v* in vars. +
+For ```prefix:``` be sure to list the appropriate subnet of your *HOST* node.
 
 ---
 image::routing2.png[caption="Figure 2: ", title="Step 3 - w/Spacing", link="{image_links}/routing2.png"]
@@ -101,6 +102,8 @@ Second condition - the hostname must contain 'rtr1' so we know we're targeting r
 
 ====
 *Step 5:* Configuring R2. Make sure the *b* in block aligns with the *b* in block from the previous R1 configuration. +
+For ```prefix:``` be sure to list the appropriate subnet of your *CONTROL* node.
+
 
 ---
 image::routing4.png[caption="Figure 4: ", title="Step 5 - w/Spacing", link="{image_links}/routing4.png"]
