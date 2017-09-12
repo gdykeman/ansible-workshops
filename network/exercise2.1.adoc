@@ -38,7 +38,7 @@ cd /tmp/ansible-tower-setup-*
 Step 6: Using an editor of your choice, open the inventory file
 [source,bash]
 ----
-vi inventory
+vim inventory
 ----
 Step 7: fill a few variables out in an inventory file: ```admin_password, rabbitmq_password, pg_password```
 

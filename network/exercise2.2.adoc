@@ -1,5 +1,5 @@
 :tower_url: https://your-control-node-ip-address
-:license_url: http://ansible-workshop.redhatgov.io/workshop-files/ansible_tower_license.txt
+:license_url: http://ansible.redhatgov.io/workshop-files/ansible_tower_license.txt
 :image_links: https://s3.amazonaws.com/ansible-workshop.redhatgov.io/_images
 :cred_url: http://docs.ansible.com/ansible-tower/latest/html/userguide/credentials.html#credential-types
 
@@ -74,10 +74,9 @@ workshop, we are using a *machine* credential.
 |NAME |Ansible Workshop Credential
 |DESCRIPTION|Credentials for Ansible Workshop
 |ORGANIZATION|Default
-|TYPE|Machine
-|USERNAME| Your Workshop Username - Student(x)
-|PASSWORD| Your Workshop Password
-|PRIVILEGE ESCALATION|Sudo (This is the default)
+|TYPE|Network
+|USERNAME| ec2-user
+|SSH Key| Copy paste in net-ws_key from control node @ ~/.ssh/net-ws_key
 |===
 
 ---
@@ -108,7 +107,7 @@ a source code management (SCM) system supported by Tower, including Git, Subvers
 |DESCRIPTION|Workshop playbooks
 |ORGANIZATION|Default
 |SCM TYPE|Git
-|SCM URL| https://github.com/ansible/lightbulb
+|SCM URL| https://github.com/gdykeman/networking-workshop
 |SCM BRANCH|
 |SCM UPDATE OPTIONS
 a|
@@ -164,9 +163,9 @@ image::at_inv_create.png[caption="Figure 7: ",title="Create an Inventory",link="
 ----
 ssh <username>@<IP_Address_of_your_control_node>
 ----
-*Step 6:* Use the ```tower-manage``` command to import an existing inventory.  (_Be sure to replace <username> with your actual username_)
+*Step 6:* Use the ```tower-manage``` command to import an existing inventory.  (_Be sure to replace student(X) with your student number_)
 ----
-sudo tower-manage inventory_import --source=/home/<username>/lightbulb/lessons/lab_inventory/<username>-instances.txt --inventory-name="Ansible Workshop Inventory"
+sudo tower-manage inventory_import --source=/home/ec2-user/networking-workshop/lab_inventory/student(x).net-ws.hosts --inventory-name="Ansible Workshop Inventory"
 ----
 
 You should see output similar to the following:
