@@ -346,6 +346,42 @@ know.  We&#8217;ll help get things fixed up.</p>
 </ul>
 </div>
 <hr>
+<div class="paragraph lead">
+<p>Section 3: Test!</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>You should now be able to ping your host that resides in a different VPC!
+We&#8217;ve bridged the two VPC&#8217;s via a GRE tunnel and added static routes to allow routing between the two subnets.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ping &lt;IP of host node&gt;</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+IP of the host node is shown as <strong>private_ip=172.16.x.x</strong> in your inventory file @ ~/networking-workshop/lab_inventory/student(x).net-ws.hosts
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>[ec2-user@ip-172-17-3-27 networking-workshop]$ ping 172.18.4.188
+PING 172.18.4.188 (172.18.4.188) 56(84) bytes of data.
+64 bytes from 172.18.4.188: icmp_seq=2 ttl=62 time=2.58 ms
+64 bytes from 172.18.4.188: icmp_seq=3 ttl=62 time=3.52 ms</code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
       </div>

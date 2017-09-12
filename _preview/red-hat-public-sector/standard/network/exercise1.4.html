@@ -334,6 +334,19 @@ vim router_configs.yml</pre>
 <p><strong>Step 3:</strong> Add the first task to capture the ios_facts.  Make sure the <strong>t</strong> in tasks lines up with the <strong>v</strong> in vars.<br>
 For <code><code>prefix:</code></code> be sure to list the appropriate subnet of your <strong>HOST</strong> node.</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>The prefix can be determined by <strong>private_ip=x.x.x.x</strong> in your inventory file @ ~/networking-workshop/lab_inventory/student(x).net-ws.hosts.</p>
+</li>
+<li>
+<p>Under the <strong>[hosts]</strong> group, the <strong>private_ip=172.16.x.x</strong> holds the private IP value.</p>
+</li>
+<li>
+<p>Our prefix would then be <code><code>prefix: 172.16.x.0</code></code></p>
+</li>
+</ul>
+</div>
 <hr>
 <div class="imageblock">
 <div class="content">
@@ -405,6 +418,19 @@ Second condition - the hostname must contain 'rtr1' so we know we&#8217;re targe
 <div class="paragraph">
 <p><strong>Step 5:</strong> Configuring R2. Make sure the <strong>b</strong> in block aligns with the <strong>b</strong> in block from the previous R1 configuration.<br>
 For <code><code>prefix:</code></code> be sure to list the appropriate subnet of your <strong>CONTROL</strong> node.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The prefix can be determined by <strong>private_ip=x.x.x.x</strong> in your inventory file @ ~/networking-workshop/lab_inventory/student(x).net-ws.hosts.</p>
+</li>
+<li>
+<p>Under the <strong>[control]</strong> group, the <strong>private_ip=172.16.x.x</strong> holds the private IP value.</p>
+</li>
+<li>
+<p>Our prefix would then be <code><code>prefix: 172.16.x.0</code></code></p>
+</li>
+</ul>
 </div>
 <hr>
 <div class="imageblock">

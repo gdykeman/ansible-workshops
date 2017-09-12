@@ -67,13 +67,6 @@ image::routing1.png[caption="Figure 1: ", title="Step 2 - w/Spacing", link="{ima
 
 
 *Step 3:* Add the first task to capture the ios_facts.  Make sure the *t* in tasks lines up with the *v* in vars. +
-For ```prefix:``` be sure to list the appropriate subnet of your *HOST* node.
-
-- The prefix can be determined by *private_ip=x.x.x.x* in your inventory file @ ~/networking-workshop/lab_inventory/student(x).net-ws.hosts.
-- Under the *[hosts]* group, the *private_ip=172.16.x.x* holds the private IP value.
-- Our prefix would then be ```prefix: 172.16.x.0```
-
-
 
 ---
 image::routing2.png[caption="Figure 2: ", title="Step 3 - w/Spacing", link="{image_links}/routing2.png"]
@@ -81,6 +74,12 @@ image::routing2.png[caption="Figure 2: ", title="Step 3 - w/Spacing", link="{ima
 
 *Step 4:* Create a block and add the tasks for rtr1 with conditionals.  We'll also add a comment for better documentation. +
 The *b* in block should align with *n* in name of the previous task where we used ios_facts.
+
+For ```prefix:``` be sure to list the appropriate subnet of your *HOST* node.
+
+- The prefix can be determined by *private_ip=x.x.x.x* in your inventory file @ ~/networking-workshop/lab_inventory/student(x).net-ws.hosts.
+- Under the *[hosts]* group, the *private_ip=172.16.x.x* holds the private IP value.
+- Our prefix would then be ```prefix: 172.16.x.0```
 
 ---
 image::routing3.png[caption="Figure 3: ", title="Step 4 - w/Spacing", link="{image_links}/routing3.png"]
