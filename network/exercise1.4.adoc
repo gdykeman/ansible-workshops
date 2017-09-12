@@ -5,7 +5,7 @@
 :block_url: http://docs.ansible.com/ansible/latest/playbooks_blocks.html
 :jinja2_url: http://docs.ansible.com/ansible/playbooks_templating.html
 :conditional_url: http://docs.ansible.com/ansible/latest/playbooks_conditionals.html#the-when-statement
-:image_links: https://s3.amazonaws.com/ansible-workshop.redhatgov.io/_images
+:image_links: https://s3.amazonaws.com/ansible.redhatgov.io/_images
 
 
 = Exercise 1.4 - Additional router configurations

@@ -4,7 +4,7 @@
 :ios_config_url: http://docs.ansible.com/ansible/latest/ios_config_module.html
 :file_url: http://docs.ansible.com/ansible/latest/file_module.html
 :yaml_url: http://docs.ansible.com/ansible/YAMLSyntax.html
-:image_links: https://s3.amazonaws.com/ansible-workshop.redhatgov.io/_images
+:image_links: https://s3.amazonaws.com/ansible.redhatgov.io/_images
 
 
 = Exercise 1.2 - Backing up Configurations
