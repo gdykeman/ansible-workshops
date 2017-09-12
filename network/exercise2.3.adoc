@@ -1,6 +1,6 @@
 :tower_url: https://your-control-node-ip-address
-:license_url: http://ansible-workshop.redhatgov.io/wslic.txt
-:image_links: https://s3.amazonaws.com/ansible-workshop.redhatgov.io/_images
+:license_url: http://ansible.redhatgov.io/wslic.txt
+:image_links: https://s3.amazonaws.com/ansible.redhatgov.io/_images
 
 = Exercise 2.3 - Creating and Running a Job Template
 
@@ -15,23 +15,20 @@ Creating a Job Template
 ====
 *Step 1:* Select TEMPLATES +
 
-*Step 2:* Click on ADD image:at_add.png[Add,35,25] +
+*Step 2:* Click on ADD and select Job Template image:at_add.png[Add,35,25] +
 
 *Step 3:* Complete the form using the following values and *SAVE* +
 
 
 |===
-|NAME |Apache Basic Job Template
-|DESCRIPTION|Template for the apache-basic-playbook
+|NAME |Router Configs Job Template
+|DESCRIPTION|Template for router configurations
 |JOB TYPE|Run
 |INVENTORY|Ansible Workshop Inventory
 |PROJECT|Ansible Workshop Project
-|PLAYBOOK|examples/apache-basic-playbook/site.yml
-|MACHINE CREDENTIAL|Ansible Workshop Credential
-|LIMIT|web
-|OPTIONS
-a|
-- [*] Enable Privilege Escalation
+|PLAYBOOK|playbooks/router_configs.yml
+|MACHINE CREDENTIAL|Demo Credential - This is required by default and can contain blank credentials.
+|NETWORK CREDENTIAL|Ansible Workshop Credential
 |===
 
 ---
@@ -42,28 +39,46 @@ image::at_jt_detail.png[caption="Figure 11: ",title="Job Template Form",link="{i
 
 *Step 4:* Select ADD SURVEY image:at_addsurvey.png[Add,35,25] +
 
-*Step 5:* Complete the survey form with following values +
+*Step 5:* Complete the survey form with following values.  We are creating three survey questions. +
 
+First Survey:
 |===
-|PROMPT|Please enter a test message for your new website
-|DESCRIPTION|Website test message prompt
-|ANSWER VARIABLE NAME|apache_test_message
+|PROMPT|Please enter the prefix to the host node
+|DESCRIPTION|Prefix for the host subnet
+|ANSWER VARIABLE NAME|prefix_host_subnet
 |ANSWER TYPE|Text
-|MINIMUM/MAXIMUM LENGTH| Use the defaults
-|DEFAULT ANSWER| Be creative, keep it clean, we're all professionals here
+|MINIMUM/MAXIMUM LENGTH| Use the defaults +
 |===
+- Then click +ADD image:at_add.png[Add,35,25]
 
+Second Survey:
+|===
+|PROMPT|Please enter the prefix to the control node
+|DESCRIPTION|Prefix for the control subnet
+|ANSWER VARIABLE NAME|prefix_control_subnet
+|ANSWER TYPE|Text
+|MINIMUM/MAXIMUM LENGTH| Use the defaults +
+|===
+- Then click +ADD image:at_add.png[Add,35,25]
+
+Third Survey:
+|===
+|PROMPT|Please enter router version that is compliant
+|DESCRIPTION|Compliant Router Version
+|ANSWER VARIABLE NAME|ios_version
+|ANSWER TYPE|Text
+|MINIMUM/MAXIMUM LENGTH| Use the defaults +
+|===
+- Then click +ADD image:at_add.png[Add,35,25]
 ---
 
 image::at_survey_detail.png[caption="Figure 12: ",title="Survey Form",link="{image_links}/at_survey_detail.png"]
 
 ---
 
-*Step 6:* Select ADD image:at_add.png[Add,35,25] +
+*Step 6:* Select SAVE image:at_save.png[Add,35,25] +
 
-*Step 7:* Select SAVE image:at_save.png[Add,35,25] +
-
-*Step 8:* Back on the main Job Template page, select SAVE image:at_save.png[Add,35,25] again. +
+*Step 7:* Back on the main Job Template page, select SAVE image:at_save.png[Add,35,25] again. +
 
 ====
 
