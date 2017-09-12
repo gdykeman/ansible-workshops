@@ -1,6 +1,6 @@
 :tower_url: https://your-control-node-ip-address
 :license_url: http://ansible.redhatgov.io/workshop-files/ansible_tower_license.txt
-:image_links: https://s3.amazonaws.com/ansible-workshop.redhatgov.io/_images
+:image_links: https://s3.amazonaws.com/ansible.redhatgov.io/_images
 :cred_url: http://docs.ansible.com/ansible-tower/latest/html/userguide/credentials.html#credential-types
 
 = Exercise 2.2 - Configuring Ansible Tower
@@ -189,11 +189,11 @@ image::at_inv_group.png[caption="Figure 9: ",title="Inventory with Groups",link=
 
 ---
 
-image::at_inv_group_detail.png[caption="Figure 10: ",title="web inventory group detail",link="{image_links}/at_inv_group_detail.png"]
+image::at_inv_group_detail.png[caption="Figure 10: ",title="routers inventory group detail",link="{image_links}/at_inv_group_detail.png"]
 
 ---
 
 === End Result
 
-At this point, we are doing with our basic configuration of Ansible Tower.  In the next exercise, we will be soley focused on
+At this point, we are doing with our basic configuration of Ansible Tower.  In the next exercise, we will be solely focused on
 creating and running a job template so you can see Tower in action.

@@ -196,5 +196,5 @@ image::at_inv_group_detail.png[caption="Figure 10: ",title="web inventory group 
 
 === End Result
 
-At this point, we are doing with our basic configuration of Ansible Tower.  In the next exercise, we will be soley focused on
+At this point, we are doing with our basic configuration of Ansible Tower.  In the next exercise, we will be solely focused on
 creating and running a job template so you can see Tower in action.
