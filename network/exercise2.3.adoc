@@ -101,7 +101,7 @@ image::at_survey_prompt.png[caption="Figure 13: ",title="Survey Prompt"]
 *Step 5:* Sit back, watch the magic happen +
 
 Once the job is running, on the left, you'll have details in regards to what playbook
-it's running, what the status is, i.e. pending, running, or complete.  You'll also notice the apache_test_message being passed in as an 'extra_variable.'
+it's running, what the status is, i.e. pending, running, or complete.  You'll also notice the prefix_control_subnet and prefix_host_subnet being passed in as 'extra_variables'
 
 To the right, you can view standard output; the same way you could if you were running Ansible Core
 from the command line. +
