@@ -1,9 +1,9 @@
 :tower_url: https://your-control-node-ip-address
 :license_url: http://ansible-workshop.redhatgov.io/workshop-files/ansible_tower_license.txt
-= Lesson 2.0 - Introduction to Ansible Tower
+= Lesson 1.0 - Introduction to Ansible Tower
 
 ---
-== Exercise 2.1 - Installing Ansible Tower
+== Exercise 1.1 - Installing Ansible Tower
 
 ---
 

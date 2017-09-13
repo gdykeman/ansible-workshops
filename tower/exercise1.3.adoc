@@ -2,7 +2,7 @@
 :license_url: http://ansible-workshop.redhatgov.io/wslic.txt
 :image_links: https://s3.amazonaws.com/ansible-workshop.redhatgov.io/_images
 
-= Exercise 2.3 - Creating and Running a Job Template
+= Exercise 1.3 - Creating and Running a Job Template
 
 ---
 

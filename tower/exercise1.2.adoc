@@ -3,7 +3,7 @@
 :image_links: https://s3.amazonaws.com/ansible-workshop.redhatgov.io/_images
 :cred_url: http://docs.ansible.com/ansible-tower/latest/html/userguide/credentials.html#credential-types
 
-= Exercise 2.2 - Configuring Ansible Tower
+= Exercise 1.2 - Configuring Ansible Tower
 
 ---
 In this exercise, we are going to configure Tower so that we can run a playbook.

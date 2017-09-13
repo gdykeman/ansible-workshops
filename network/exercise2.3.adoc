@@ -68,6 +68,7 @@ Third Survey:
 |ANSWER VARIABLE NAME|ios_version
 |ANSWER TYPE|Text
 |MINIMUM/MAXIMUM LENGTH| Use the defaults +
+|DEFAULT ANSWER| 16.05.01b
 |===
 - Then click +ADD image:at_add.png[Add,35,25]
 ---
