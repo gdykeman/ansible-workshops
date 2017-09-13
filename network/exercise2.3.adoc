@@ -61,16 +61,6 @@ Second Survey:
 |===
 - Then click +ADD image:at_add.png[Add,35,25]
 
-Third Survey:
-|===
-|PROMPT|Please enter router version that is compliant
-|DESCRIPTION|Compliant Router Version
-|ANSWER VARIABLE NAME|ios_version
-|ANSWER TYPE|Text
-|MINIMUM/MAXIMUM LENGTH| Use the defaults +
-|DEFAULT ANSWER| 16.05.01b
-|===
-- Then click +ADD image:at_add.png[Add,35,25]
 ---
 
 image::at_survey_detail.png[caption="Figure 12: ",title="Survey Form",link="{image_links}/at_survey_detail.png"]
@@ -128,20 +118,10 @@ You can also click on the nodes in the standard output under a specific task for
 image::at_job_tasklist.png[caption="Figure 15: ",title="Play and Task Details",link="{image_links}/at_job_tasklist.png"]
 
 ---
-
-*Step 6:* Once your job is sucessful, navigate to your new website +
-----
-http://<IP_of_node-1_or_node-2>
-----
-If all went well, you should see something like this, but with your own custom message of course. +
-
----
-
-image::at_web_tm.png[caption="Figure 17: ",title="New Website with Personalized Test Message"]
-
----
-
 ====
+[.lead]
+Congrtulations! +
+You've successfully completed the Ansible Tower portion of the workshop!
 
 == End Result
 At this point in the workshop, you've experienced the core functionality of Ansible Tower.  But wait... there's more!
