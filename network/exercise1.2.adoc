@@ -19,7 +19,7 @@ and put them into a repeatable set of *plays* and *tasks*.
 A playbook can have multiple plays and a play
 can have one or multiple tasks.  The goal of a *play* is to map a group of hosts.  The goal of a *task* is to implement modules against those hosts.
 
-For our first playbook, we are only create a backup of our two routers.
+For our first playbook, we will create a backup of our two routers.
 
 [.lead]
 Section 1 - Creating a Directory Structure and Files for your Playbook
