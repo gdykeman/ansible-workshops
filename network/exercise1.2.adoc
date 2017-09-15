@@ -66,7 +66,7 @@ Now that we are editing ```backup.yml```, let's begin by defining the play and t
 
 ====
 
-- ```---``` Defines the beginning of YAML
+- ```---``` Let's us know that the following is a yaml file.
 - ```hosts: routers``` Defines the host group in your inventory on which this play will run against
 - ```name: backup router configurations``` This describes our play
 - ```gather_facts: no``` Tells Ansible to not run something called the setup module. The setup module is useful when targeting computing nodes (Linux, Windows), but not really used when targeting networking devices. We would use the necessary platform_facts module depending on type of nodes we’re targeting.
@@ -99,7 +99,12 @@ tasks:
 
 - ```tasks:``` This denotes that one or more tasks are about to be defined
 - ```- name:``` Each task should be given a name which will print to standard output when you run your playbook.
-Therefore, give your tasks a name that is short, sweet, and to the point
+Therefore, give your tasks a name that is short, sweet, and to the point +
+- The following section is using the *ios_facts* ansible module to gather IOS related facts about the router we are targeting.  link:{ios_facts_url}[Click here] to learn more
+about the *ios_facts* module.  +
+We are taking the *ios_facts* that the module provides and registering it to a variable called facts.  This information is now available to us to use in subsequent tasks if we wish to do so.
+Next, we are making a debug statement to display the output of what information is actually captured when using the *ios_facts* module.
+
 
 ---
 [source,text]
@@ -111,11 +116,9 @@ Therefore, give your tasks a name that is short, sweet, and to the point
 - debug:
     msg: "{{facts}}"
 ----
-- The following section is using the *ios_facts* ansible module to gather IOS related facts about the router we are targeting.  link:{ios_facts_url}[Click here] to learn more
-about the *ios_facts* module.  +
-We are taking the *ios_facts* that the module provides and registering it to a variable called facts.  This information is now available to us to use in subsequent tasks if we wish to do so.
-Next, we are using the debug module to display the output of what information is actually captured when using the *ios_facts* module.
 
+- The next three lines are calling the Ansible module *ios_config* and passing in the parameter ```*backup: yes*``` to capture the configuration of the routers and generate a backup file.
+link:{ios_config_url}[Click here] to see all options for the ios_config module.
 
 [source,text]
 ----
@@ -123,8 +126,6 @@ Next, we are using the debug module to display the output of what information is
   ios_config:
     backup: yes
 ----
-- These three lines are calling the Ansible module *ios_config* and passing in *backup: yes* to capture the configuration of the routers and generate a backup file.
-link:{ios_config_url}[Click here] to see all options for the ios_config module.
 
 ---
 
