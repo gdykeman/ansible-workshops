@@ -61,6 +61,16 @@ Second Survey:
 |===
 - Then click +ADD image:at_add.png[Add,35,25]
 
+|===
+|PROMPT|Please enter the IOS Version
+|DESCRIPTION|Compliant IOS Version
+|ANSWER VARIABLE NAME|ios_version
+|ANSWER TYPE|Text
+|MINIMUM/MAXIMUM LENGTH| Use the defaults +
+|DEFAULT ANSWER| 16.05.01b
+|===
+- Then click +ADD image:at_add.png[Add,35,25]
+
 ---
 
 image::at_survey_detail.png[caption="Figure 12: ",title="Survey Form",link="{image_links}/at_survey_detail.png"]
@@ -101,7 +111,7 @@ image::at_survey_prompt.png[caption="Figure 13: ",title="Survey Prompt"]
 *Step 5:* Sit back, watch the magic happen +
 
 Once the job is running, on the left, you'll have details in regards to what playbook
-it's running, what the status is, i.e. pending, running, or complete.  You'll also notice the prefix_control_subnet and prefix_host_subnet being passed in as 'extra_variables'
+it's running, what the status is, i.e. pending, running, or complete.  You'll also notice the prefix_control_subnet, prefix_host_subnet, and ios_version being passed in as 'extra_variables'
 
 To the right, you can view standard output; the same way you could if you were running Ansible Core
 from the command line. +
@@ -120,7 +130,7 @@ image::at_job_tasklist.png[caption="Figure 15: ",title="Play and Task Details",l
 ---
 ====
 [.lead]
-Congrtulations! +
+Congratulations! +
 You've successfully completed the Ansible Tower portion of the workshop!
 
 == End Result
