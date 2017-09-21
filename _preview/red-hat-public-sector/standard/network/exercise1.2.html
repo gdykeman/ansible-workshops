@@ -386,7 +386,13 @@ If you want to see the entire playbook for reference, skip to the end of Section
 </li>
 <li>
 <p><code><code>- name:</code></code> Each task should be given a name which will print to standard output when you run your playbook.
-Therefore, give your tasks a name that is short, sweet, and to the point</p>
+Therefore, give your tasks a name that is short, sweet, and to the point<br></p>
+</li>
+<li>
+<p>The following section is using the <strong>ios_facts</strong> ansible module to gather IOS related facts about the router we are targeting.  <a href="http://docs.ansible.com/ansible/latest/ios_facts_module.html">Click here</a> to learn more
+about the <strong>ios_facts</strong> module. <br>
+We are taking the <strong>ios_facts</strong> that the module provides and registering it to a variable called facts.  This information is now available to us to use in subsequent tasks if we wish to do so.
+Next, we are making a debug statement to display the output of what information is actually captured when using the <strong>ios_facts</strong> module.</p>
 </li>
 </ul>
 </div>
@@ -404,10 +410,8 @@ Therefore, give your tasks a name that is short, sweet, and to the point</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The following section is using the <strong>ios_facts</strong> ansible module to gather IOS related facts about the router we are targeting.  <a href="http://docs.ansible.com/ansible/latest/ios_facts_module.html">Click here</a> to learn more
-about the <strong>ios_facts</strong> module. <br>
-We are taking the <strong>ios_facts</strong> that the module provides and registering it to a variable called facts.  This information is now available to us to use in subsequent tasks if we wish to do so.
-Next, we are using the debug module to display the output of what information is actually captured when using the <strong>ios_facts</strong> module.</p>
+<p>The next three lines are calling the Ansible module <strong>ios_config</strong> and passing in the parameter <code><code><strong>backup: yes</strong></code></code> to capture the configuration of the routers and generate a backup file.
+<a href="http://docs.ansible.com/ansible/latest/ios_config_module.html">Click here</a> to see all options for the ios_config module.</p>
 </li>
 </ul>
 </div>
@@ -417,14 +421,6 @@ Next, we are using the debug module to display the output of what information is
   ios_config:
     backup: yes</code></pre>
 </div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>These three lines are calling the Ansible module <strong>ios_config</strong> and passing in <strong>backup: yes</strong> to capture the configuration of the routers and generate a backup file.
-<a href="http://docs.ansible.com/ansible/latest/ios_config_module.html">Click here</a> to see all options for the ios_config module.</p>
-</li>
-</ul>
 </div>
 <hr>
 <div class="ulist">
