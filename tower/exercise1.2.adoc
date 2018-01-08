@@ -1,5 +1,5 @@
 :tower_url: https://your-control-node-ip-address
-:license_url: http://ansible-workshop.redhatgov.io/workshop-files/ansible_tower_license.txt
+:license_url: https://www.ansible.com/workshop-license
 :image_links: https://s3.amazonaws.com/ansible-workshop.redhatgov.io/_images
 :cred_url: http://docs.ansible.com/ansible-tower/latest/html/userguide/credentials.html#credential-types
 
@@ -44,9 +44,8 @@ image::at_lic_prompt.png[caption="Figure 4: ", title="Uploading a License"]
 
 ---
 
-*Step 2:* In a seperate browser tab, download your license key by browsing to {license_url} +
-*Step 3:* Back in the Tower UI, choose BROWSE image:at_browse.png[LicB,35,25] and upload your
-recently downloaded license file into Tower. +
+*Step 2:* In a seperate browser tab, browse to {license_url} to request a workshop license. +
+*Step 3:* Back in the Tower UI, choose BROWSE image:at_browse.png[LicB,35,25] and upload the license file you recieved via e-mail. +
 *Step 4:* Select "_I agree to the End User License Agreement_" +
 *Step 5:* Click on SUBMIT image:at_submit.png[Sub,35,25] +
 
