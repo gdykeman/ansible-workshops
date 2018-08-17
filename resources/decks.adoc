@@ -2,8 +2,8 @@
 = Ansible Workshop - Presentation Decks
 :data-uri:
 :icons:
-:essentials: http://ansible.redhatgov.io/decks/ansible-essentials.html#/
-:tower: http://ansible.redhatgov.io/decks/intro-to-ansible-tower.html#/
+:essentials: https://network-automation.github.io/linklight/decks/ansible-essentials.html
+:tower: https://network-automation.github.io/linklight/decks/intro-to-ansible-tower.html#/
 
 '''
 link:{essentials}[Ansible Essentials Presentation Deck]
