@@ -95,7 +95,7 @@ You can manage playbooks and playbook directories by either placing them manuall
 under the Project Base Path on your Tower server, or by placing your playbooks into
 a source code management (SCM) system supported by Tower, including Git, Subversion, and Mercurial.
 ====
-*Step 1:* From the view pane on the left, select *Projects* under Resources image:at_projects.png[Gear,85,65]+
+*Step 1:* From the view pane on the left, select *Projects* under Resources image:3.3_projects.png[Gear,85,65] +
 
 *Step 2:* Click the *plus* sign towards the top right  image:3.3_plus.png[plus,20,20] +
 
@@ -139,7 +139,7 @@ An Inventory can also be imported into Tower using the ```tower-manage``` comman
 and this is how we are going to add an inventory for this workshop.
 
 ====
-*Step 1:* From the view pane on the left, select *Inventories* under Resources image:3.3_inventories.png[Gear,85,65]+
+*Step 1:* From the view pane on the left, select *Inventories* under Resources image:3.3_inventories.png[Gear,85,65] +
 
 *Step 2:* Click the *plus* sign towards the top right and select *Inventory*  image:3.3_plus.png[plus,20,20] +
 
