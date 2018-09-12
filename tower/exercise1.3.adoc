@@ -13,9 +13,9 @@ Job templates are useful to execute the same job many times.
 Creating a Job Template
 
 ====
-*Step 1:* Select TEMPLATES +
+*Step 1:* From the view pane on the left, select *Templates* under Resources image:3.3_templates.png[Gear,85,65] +
 
-*Step 2:* Click on ADD image:at_add.png[Add,35,25] +
+*Step 2:* Click the *plus* sign towards the top right and select *Job Template* image:3.3_plus.png[plus,20,20] +
 
 *Step 3:* Complete the form using the following values and *SAVE* +
 
@@ -36,11 +36,11 @@ a|
 
 ---
 
-image::at_jt_detail.png[caption="Figure 11: ",title="Job Template Form",link="{image_links}/at_jt_detail.png"]
+image::3.3_job_template.png[caption="Figure 11: ",title="Job Template Form",link="{image_links}/at_jt_detail.png"]
 
 ---
 
-*Step 4:* Select ADD SURVEY image:at_addsurvey.png[Add,35,25] +
+*Step 4:* Once saved, select ADD SURVEY image:at_addsurvey.png[Add,35,25] +
 
 *Step 5:* Complete the survey form with following values +
 
